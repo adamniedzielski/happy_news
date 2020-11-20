@@ -35,8 +35,7 @@ jobs:
         PGHOST: localhost
         PGUSER: postgres
         RAILS_ENV: test
-        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
       run: |
         bundle exec rails db:setup
         bundle exec rails spec
