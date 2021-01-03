@@ -4,8 +4,20 @@ require "rails_helper"
 
 RSpec.describe SendDailyBriefing do
   it "sends multiple articles to Kindle" do
-    get_rbb_articles = instance_double(GetRbbArticles, call: [])
-    get_rbb_article_content = instance_double(GetRbbArticleContent, call: "")
+    get_rbb_articles = instance_double(
+      GetRbbArticles,
+      call: [
+        RSS::Rss::Channel::Item.new(link: "link-1"),
+        RSS::Rss::Channel::Item.new(link: "link-2")
+      ]
+    )
+
+    get_rbb_article_content = instance_double(GetRbbArticleContent)
+    allow(get_rbb_article_content).to receive(:call).with("link-1")
+      .and_return("Content 1")
+    allow(get_rbb_article_content).to receive(:call).with("link-2")
+      .and_return("Content 2")
+
     send_to_kindle = instance_double(SendToKindle, call: nil)
 
     service = SendDailyBriefing.new(

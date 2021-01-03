@@ -14,7 +14,7 @@ class SendDailyBriefing
   def call
     content = get_rbb_articles.call.map do |article|
       get_rbb_article_content.call(article.link)
-    end.join
+    end.join(" ")
 
     send_to_kindle.call(content)
   end
