@@ -39,4 +39,16 @@ RSpec.describe GetRbbArticleContent do
       "Das mit dem Doktortitel wird wegen der bevorstehenden Wahlen hochgespielt"
     )
   end
+
+  it "does not break when comments are outside article" do
+    http_client = MockHTTPClient.new("rbb-article-comments-outside.html")
+    service = GetRbbArticleContent.new(http_client: http_client)
+    result = service.call(
+      "https://www.rbb24.de/panorama/beitrag/2021/01/vier-autos-brennen-in-einer-nacht-in-berlin-friedrichsfelde.html"
+    )
+
+    expect(result).to include(
+      "Vier Autos brennen in einer Nacht in Berlin-Friedrichsfelde"
+    )
+  end
 end
