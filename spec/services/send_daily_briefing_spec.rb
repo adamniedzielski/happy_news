@@ -13,10 +13,10 @@ RSpec.describe SendDailyBriefing do
     )
 
     get_rbb_article_content = instance_double(GetRbbArticleContent)
-    allow(get_rbb_article_content).to receive(:call).with("link-1")
-      .and_return("Content 1")
-    allow(get_rbb_article_content).to receive(:call).with("link-2")
-      .and_return("Content 2")
+    allow(get_rbb_article_content).to receive(:call)
+      .with("link-1").and_return("Content 1")
+    allow(get_rbb_article_content).to receive(:call)
+      .with("link-2").and_return("Content 2")
 
     send_to_kindle = instance_double(SendToKindle, call: nil)
 
@@ -30,5 +30,5 @@ RSpec.describe SendDailyBriefing do
 
     expect(send_to_kindle).to have_received(:call)
       .with("Content 1 Content 2")
- end
+  end
 end
