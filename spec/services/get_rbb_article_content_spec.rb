@@ -51,4 +51,14 @@ RSpec.describe GetRbbArticleContent do
       "Vier Autos brennen in einer Nacht in Berlin-Friedrichsfelde"
     )
   end
+
+  it "skips overview articles" do
+    http_client = MockHTTPClient.new("rbb-article-overview.html")
+    service = GetRbbArticleContent.new(http_client: http_client)
+    result = service.call(
+      "https://www.rbb24.de/panorama/thema/2020/coronavirus/hilfsuebersicht-themenmodul-userfragen.html"
+    )
+
+    expect(result).to eq ""
+  end
 end

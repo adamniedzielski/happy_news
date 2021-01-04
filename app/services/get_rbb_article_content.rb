@@ -11,6 +11,8 @@ class GetRbbArticleContent
     page = Nokogiri::HTML(http_client.get(simplified_version_url).body)
     article = page.at("article[role=article]")
 
+    return "" unless article
+
     article.at(".commentarea")&.remove
 
     article.inner_html
