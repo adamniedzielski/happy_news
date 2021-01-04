@@ -9,9 +9,9 @@ class GetRbbArticleContent
     simplified_version_url = "#{url}/print=true"
 
     page = Nokogiri::HTML(http_client.get(simplified_version_url).body)
-    article = page.at("article")
+    article = page.at("article[role=article]")
 
-    article.at(".commentarea").remove
+    article.at(".commentarea")&.remove
 
     article.inner_html
   end
