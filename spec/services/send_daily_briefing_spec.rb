@@ -29,6 +29,16 @@ RSpec.describe SendDailyBriefing do
     service.call
 
     expect(send_to_kindle).to have_received(:call)
-      .with("Content 1 Content 2")
+      .with(
+        <<~HEREDOC
+          <!DOCTYPE html>
+          <html lang="en">
+            <head></head>
+            <body>
+              Content 1 Content 2
+            </body>
+          </html>
+        HEREDOC
+      )
   end
 end

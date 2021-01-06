@@ -12,11 +12,22 @@ class SendDailyBriefing
   end
 
   def call
-    content = get_rbb_articles.call.map do |article|
+    body = get_rbb_articles.call.map do |article|
       get_rbb_article_content.call(article.link)
     end.join(" ")
 
-    send_to_kindle.call(content)
+    document =
+      <<~HEREDOC
+        <!DOCTYPE html>
+        <html lang="en">
+          <head></head>
+          <body>
+            #{body}
+          </body>
+        </html>
+      HEREDOC
+
+    send_to_kindle.call(document)
   end
 
   private
