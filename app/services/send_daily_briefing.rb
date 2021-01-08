@@ -16,6 +16,7 @@ class SendDailyBriefing
       get_rbb_article_content.call(article.link)
     end.join(" ")
 
+    document_name = "Happy Briefing #{Time.current.strftime('%d.%m')}"
     document =
       <<~HEREDOC
         <!DOCTYPE html>
@@ -27,7 +28,7 @@ class SendDailyBriefing
         </html>
       HEREDOC
 
-    send_to_kindle.call("Happy Briefing", document)
+    send_to_kindle.call(document_name, document)
   end
 
   private
