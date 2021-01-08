@@ -30,6 +30,7 @@ RSpec.describe SendDailyBriefing do
 
     expect(send_to_kindle).to have_received(:call)
       .with(
+        anything,
         <<~HEREDOC
           <!DOCTYPE html>
           <html lang="en">
@@ -40,5 +41,26 @@ RSpec.describe SendDailyBriefing do
           </html>
         HEREDOC
       )
+  end
+
+  it "includes current date in the document name" do
+    get_rbb_articles = instance_double(GetRbbArticles, call: [])
+    get_rbb_article_content = instance_double(GetRbbArticleContent, call: "")
+    send_to_kindle = instance_double(SendToKindle, call: nil)
+
+    service = SendDailyBriefing.new(
+      get_rbb_articles: get_rbb_articles,
+      get_rbb_article_content: get_rbb_article_content,
+      send_to_kindle: send_to_kindle
+    )
+
+    travel_to(Time.zone.parse("2021-01-09")) do
+      service.call
+    end
+
+    expect(send_to_kindle).to have_received(:call).with(
+      "Happy Briefing 09.01",
+      anything
+    )
   end
 end

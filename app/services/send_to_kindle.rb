@@ -5,9 +5,10 @@ class SendToKindle
     self.receiver = receiver
   end
 
-  def call(html_content)
+  def call(document_name, html_content)
     KindleMailer.call(
       receiver,
+      document_name,
       html_content.encode(Encoding::ISO_8859_1, invalid: :replace, undef: :replace)
     ).deliver_now
   end
