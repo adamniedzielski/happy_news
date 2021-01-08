@@ -27,7 +27,7 @@ class SendDailyBriefing
         </html>
       HEREDOC
 
-    send_to_kindle.call(document)
+    send_to_kindle.call("Happy Briefing", document)
   end
 
   private

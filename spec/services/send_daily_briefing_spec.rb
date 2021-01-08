@@ -30,6 +30,7 @@ RSpec.describe SendDailyBriefing do
 
     expect(send_to_kindle).to have_received(:call)
       .with(
+        "Happy Briefing",
         <<~HEREDOC
           <!DOCTYPE html>
           <html lang="en">
