@@ -6,7 +6,10 @@ class SendToKindle
   end
 
   def call(html_content)
-    KindleMailer.call(receiver, html_content).deliver_now
+    KindleMailer.call(
+      receiver,
+      html_content.encode(Encoding::ISO_8859_1, invalid: :replace, undef: :replace)
+    ).deliver_now
   end
 
   private
