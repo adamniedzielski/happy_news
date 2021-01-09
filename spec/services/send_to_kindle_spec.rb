@@ -17,12 +17,13 @@ RSpec.describe SendToKindle do
     end
 
     service = SendToKindle.new(receiver: "test@kindle.com")
-
-    expect(KindleMailer).to receive(:call)
-      .with(anything, "Happy Briefing 08.01", iso_8859_1_encoded)
+    allow(KindleMailer).to receive(:call)
       .and_call_original
 
     service.call("Happy Briefing 08.01", "Üäößß")
+
+    expect(KindleMailer).to have_received(:call)
+      .with(anything, "Happy Briefing 08.01", iso_8859_1_encoded)
   end
 
   it "passes the document name" do
