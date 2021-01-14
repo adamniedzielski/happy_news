@@ -61,4 +61,14 @@ RSpec.describe GetRbbArticleContent do
 
     expect(result).to eq ""
   end
+
+  it "removes the social sharing section" do
+    http_client = MockHTTPClient.new("rbb-article.html")
+    service = GetRbbArticleContent.new(http_client: http_client)
+    result = service.call(
+      "https://www.rbb24.de/politik/beitrag/2020/11/spd-landesparteitag-vorsitzende-giffey-saleh-wahlergebnisse.html"
+    )
+
+    expect(result).not_to include("bei Facebook teilen")
+  end
 end
