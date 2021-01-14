@@ -13,7 +13,9 @@ class GetRbbArticleContent
 
     return "" unless article
 
-    article.at(".commentarea")&.remove
+    article.css(".commentarea")&.remove
+    article.css(".newSharing")&.remove
+    article.css("section.teaserbox")&.remove
 
     article.inner_html
   end
