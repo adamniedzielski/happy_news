@@ -16,6 +16,7 @@ class GetRbbArticleContent
     article.css(".commentarea")&.remove
     article.css(".newSharing")&.remove
     article.css("section.teaserbox")&.remove
+    article.css("figure.picture")&.remove
 
     article.inner_html
   end
