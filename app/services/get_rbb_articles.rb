@@ -9,10 +9,18 @@ class GetRbbArticles
 
   def call
     feed = RSS::Parser.parse(http_client.get(URL).body)
-    feed.items
+
+    articles = feed.items
+    reject_videos(articles)
   end
 
   private
 
   attr_accessor :http_client
+
+  def reject_videos(articles)
+    articles.reject do |article|
+      article.title.start_with?("Video")
+    end
+  end
 end

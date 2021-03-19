@@ -9,6 +9,17 @@ RSpec.describe GetRbbArticles do
     service = GetRbbArticles.new(http_client: http_client)
     result = service.call
 
-    expect(result.size).to eq 60
+    expect(result.size).to eq 57
+  end
+
+  it "skips videos" do
+    http_client = MockHTTPClient.new("rbb-video-articles.xml")
+    service = GetRbbArticles.new(http_client: http_client)
+    result = service.call
+
+    expect(result.size).to eq 1
+    expect(result.first.title).to eq(
+      "AfD-Parteitag in Frankfurt (Oder): Teilnehmerzahl bleibt nach Gerichtsentscheid auf 500 begrenzt"
+    )
   end
 end
