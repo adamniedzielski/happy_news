@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+		xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<!--
+		* Die Nutzung dieser Inhalte ist ausschliesslich nicht-kommerziellen Internet-
+		* Angeboten erlaubt, die Nutzung kann jederzeit von rbb-online.de untersagt 
+		* werden. rbb-online.de uebernimmt keinen Support, zudem wird keine Verfuegbarkeit 
+		* dieser XML-Datei gewaehrleistet. Die Inhalte duerfen nicht archiviert werden.
+		* Weitere Informationen http://www.rbb-online.de/hilfe/copyright.html
+	-->
+	<channel>
+		<title>rbb24 | rbb24</title>
+		<link>https://www.rbb24.de/aktuell/index.html</link>
+		<description></description>
+		<lastBuildDate>Fri, 19 Mar 2021 12:50:48 +0100</lastBuildDate>
+<item>
+	<title>AfD-Parteitag in Frankfurt (Oder): Teilnehmerzahl bleibt nach Gerichtsentscheid auf 500 begrenzt</title>
+	<link>https://www.rbb24.de/studiofrankfurt/politik/2021/03/verwaltungsgericht-afd-teilnehmerzahl-begrenzung-frankfurt.html</link>
+	<description>Maximal 500 Personen d&#252;rfen an dem geplanten Parteitag der Brandenburger AfD in Frankfurt (Oder) teilnehmen. Diese Festlegung der Stadt wurde jetzt gerichtlich best&#228;tigt. Die Partei hatte versucht, 700 als H&#246;chstzahl durchzusetzen - scheiterte aber.
+
+</description>
+	<pubDate>Fri, 19 Mar 2021 12:47:08 +0100</pubDate>
+</item>
+<item>
+	<title>Video | Corona-Impfstoff: Wie geht es weiter mit dem AstraZeneca-Vakzin?</title>
+	<link>https://www.rbb24.de/panorama/thema/corona/av7/video-astrazeneca-impfung-brandenburg.html</link>
+	<description>&#160; &#160;
+</description>
+	<pubDate>Thu, 18 Mar 2021 22:25:00 +0100</pubDate>
+</item>
+	</channel>
+</rss>
+
