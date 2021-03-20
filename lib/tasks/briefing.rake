@@ -2,6 +2,7 @@
 
 namespace :briefing do
   task send_daily: :environment do
-    SendDailyBriefing.new.call
+    banned_phrases = ENV.fetch("BANNED_PHRASES").split("|")
+    SendDailyBriefing.new.call(banned_phrases: banned_phrases)
   end
 end
