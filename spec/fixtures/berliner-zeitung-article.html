@@ -1,0 +1,1598 @@
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-itunes-app" content="app-id=1401223428">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="Content-Language" content="de">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=WG268x3wXy">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-precomposed.png?v=WG268x3wXy">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=WG268x3wXy">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=WG268x3wXy">
+    <link rel="manifest" href="/manifest.json?v=WG268x3wXy" crossOrigin="use-credentials">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=WG268x3wXy" color="#000000">
+    <link rel="shortcut icon" href="/favicon.ico?v=WG268x3wXy">
+    <link rel="search-placeholder" href="/blz-search-placeholder.jpg?v=WG268x3wXy">
+    <meta name=”msapplication-config” content=”/browserconfig.xml?v=WG268x3wXy” />
+    <meta name="apple-mobile-web-app-title" content="Berliner Zeitung">
+    <meta name="application-name" content="Berliner Zeitung">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=1401223428">
+    <meta name="projectHandle" content='blz'>
+    <meta property="fb:pages" content="137267732953826" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed Berliner Zeitung: Mensch &amp; Metropole" href="/feed.id_mensch_und_metropole.xml"/><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Berliner Zeitung",
+    "url": "https://www.berliner-zeitung.de/",
+    "logo": "https://www.berliner-zeitung.de/logo-blz.svg",
+    "description": "Berliner Zeitung - Nachrichten aus Berlin, Berliner Bezirken und Brandenburg sowie aus Deutschland und der Welt. Berichte, Kommentare und Analysen zu Politik, Kultur, Sport.",
+    "sameAs": ["https://www.facebook.com/berlinerzeitung", "https://twitter.com/berlinerzeitung", "https://www.instagram.com/berliner_zeitung/", "https://www.berliner-zeitung.de/digital/whatsapp-news-so-meldest-du-dich-kostenlos-fuer-unseren-neuen-service-an-24142568"],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Berliner Verlag GmbH",
+      "address": "Alte Jakobstraße 105, 10965 Berlin, Germany"
+    }
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Berliner Zeitung",
+    "url": "https://www.berliner-zeitung.de/",
+    "potentialAction": [{
+      "@type": "SearchAction",
+      "target": "https://www.berliner-zeitung.de/suche?q={q}",
+      "query-input": "required name=q"
+    }]
+  }
+</script>
+<script>
+  function setCookie(name, value, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = 'expires=' + d.toUTCString();
+    document.cookie = name + '=' + value + ';' + expires + ';path=/';
+  }
+
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function addVendor(vendor){
+  	_vendor = vendor;
+  	if(typeof window.nonIabVendorConsents == 'undefined'){
+    		window.nonIabVendorConsents = [_vendor];
+  	}
+  	else{
+  		if(!window.nonIabVendorConsents.includes(_vendor))
+    		window.nonIabVendorConsents.push(_vendor);
+  		}
+  	setCookie("noniab_vendors",JSON.stringify(nonIabVendorConsents),90);
+  }
+
+  function getNonIabVendors(){
+	  var cookie_val = getCookie("noniab_vendors");
+	  if(cookie_val!="") {
+	  	var noniab_vendors = JSON.parse(cookie_val);
+	  }
+	  return noniab_vendors;
+  }
+</script>
+    <script type="text/javascript">
+  !function () { var e = function () { var e, t = "__tcfapiLocator", a = [], n = window; for (; n;) { try { if (n.frames[t]) { e = n; break } } catch (e) { } if (n === window.top) break; n = n.parent } e || (!function e() { var a = n.document, r = !!n.frames[t]; if (!r) if (a.body) { var i = a.createElement("iframe"); i.style.cssText = "display:none", i.name = t, a.body.appendChild(i) } else setTimeout(e, 5); return !r }(), n.__tcfapi = function () { for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++)n[r] = arguments[r]; if (!n.length) return a; if ("setGdprApplies" === n[0]) n.length > 3 && 2 === parseInt(n[1], 10) && "boolean" == typeof n[3] && (e = n[3], "function" == typeof n[2] && n[2]("set", !0)); else if ("ping" === n[0]) { var i = { gdprApplies: e, cmpLoaded: !1, cmpStatus: "stub" }; "function" == typeof n[2] && n[2](i) } else a.push(n) }, n.addEventListener("message", (function (e) { var t = "string" == typeof e.data, a = {}; try { a = t ? JSON.parse(e.data) : e.data } catch (e) { } var n = a.__tcfapiCall; n && window.__tcfapi(n.command, n.version, (function (a, r) { var i = { __tcfapiReturn: { returnValue: a, success: r, callId: n.callId } }; t && (i = JSON.stringify(i)), e.source.postMessage(i, "*") }), n.parameter) }), !1)) }; "undefined" != typeof module ? module.exports = e : e() }();
+</script>
+
+<script type="text/javascript">
+  window._sp_ = {
+      config: {
+          accountId: 1086,
+          baseEndpoint: 'https://cdn.privacy-mgmt.com',
+      }
+  }
+  window.nonIabVendorConsents = [];
+
+  if(typeof getNonIabVendors()!="undefined"){
+	  _noniab_vendors	= getNonIabVendors();
+	  window.nonIabVendorConsents = _noniab_vendors;
+  }
+
+</script>
+<script src="https://cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js"></script>
+
+<script>
+  function checkVendor(vendorName){
+    let found = false
+    __cmp('getCustomVendorConsents', null, function(vendorConsents) {
+      vendorConsents.consentedVendors.forEach(vendor => {
+        if (vendor.name === vendorName){
+          found = true
+        }
+      })
+    })
+    return found
+  }
+</script>
+    <script>
+  function loadGoogleTagManagerBLZ() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N6MLXX6');
+
+    if(!document.getElementById('googleTagManager')){
+      var e = document.createElement('noscript');
+      e.id = 'googleTagManager'
+      var iframe = document.createElement('iframe');
+      iframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-N6MLXX6"
+      iframe.height = "0"
+      iframe.width = "0"
+      iframe.style = "display:none;visibility:hidden"
+      e.appendChild(iframe)
+      document.body.prepend(e)
+    }
+  }
+</script>
+
+    <script>
+    function loadGoogleAnalyticsBlz () {
+      if(!document.getElementById('googleAnalyticsTag')){
+        var e = document.createElement('script');
+        e.id = 'googleAnalyticsTag'
+        e.type = 'text/javascript'
+        e.async = true;
+        e.src = "https://www.googletagmanager.com/gtag/js?id=UA-159951176-1";
+        const scripts = document.getElementsByTagName('script')
+        scripts[0].parentNode.insertBefore(e, scripts[0]);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-159951176-1', { 'anonymize_ip': true });
+      }
+    }
+</script>
+
+    <script>
+  function setGtagData () {
+    const id = 150204
+    const metadataObj = {"dependencies":{},"routing":{"path":"/mensch-metropole/berliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204"},"authorNames":"Norbert Koch-Klaucke","sortDate":"2021-04-02T13:17:33.216Z","updatedDate":"2021-04-02T13:30:42.747Z","category":{"id":"id_mensch_und_metropole","path":"/mensch-metropole"},"slug":"berliner-forscher-bitten-zu-ostern-zur-hasenjagd","title":"Berliner Forscher bitten zu Ostern zur Hasenjagd","description":"Naturschützer und Zoologen rufen die Berliner zum Zählen der Feldhasen und Wildkaninchen auf. Vor allem im Ostteil ist immer öfter der echte Hase zu sehen.","publishDate":"2021-04-02T13:17:33.216Z","catchline":"Zählaktion","teaserImage":{"originalUrl":"https://blz-livingdocs-images.s3.amazonaws.com/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg","url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?w=1024&auto=format","mediaId":"4Xw4tIuSb4YX","width":1348,"height":900,"mimeType":"image/jpeg","imageService":"imgix","crops":[{"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&w=1024&auto=format","name":"16:9","ratio":1.77778,"x":0,"y":71,"width":1348,"height":758,"srcSet":[{"width":1024,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&w=1024&auto=format"},{"width":750,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&w=750&auto=format"},{"width":620,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&w=620&auto=format"},{"width":450,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&w=450&auto=format"},{"width":320,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&w=320&auto=format"}]},{"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C312%2C1348%2C449&w=1024&auto=format","name":"3:1","x":0,"y":312,"width":1348,"height":449,"srcSet":[{"width":1024,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C312%2C1348%2C449&w=1024&auto=format"},{"width":750,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C312%2C1348%2C449&w=750&auto=format"},{"width":620,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C312%2C1348%2C449&w=620&auto=format"},{"width":450,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C312%2C1348%2C449&w=450&auto=format"},{"width":320,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C312%2C1348%2C449&w=320&auto=format"}]},{"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C1%2C1348%2C899&w=1024&auto=format","name":"3:2","ratio":1.5,"x":0,"y":1,"width":1348,"height":899,"srcSet":[{"width":1024,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C1%2C1348%2C899&w=1024&auto=format"},{"width":750,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C1%2C1348%2C899&w=750&auto=format"},{"width":620,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C1%2C1348%2C899&w=620&auto=format"},{"width":450,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C1%2C1348%2C899&w=450&auto=format"},{"width":320,"url":"https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C1%2C1348%2C899&w=320&auto=format"}]}]},"authors":{"$ref":"documents","references":[{"id":"750"}]},"authorLine":"Norbert Koch-Klaucke","keywords":"Forscher, Berlin, Hasen, Jagd, Zählaktion, Nabu, IZW","language":{"label":"German","locale":"de","groupId":"vgEOv4GBDEFN"}}
+    const categoryObj = {"id":"id_mensch_und_metropole","label":"Mensch & Metropole","path":"/mensch-metropole","parent":"id_home","metadata":{"tagManager":"UA-XXXXXXXX-X","analytics":"UA-XXXXXXXX-X","ivwPixelId":"bar","homePageGAdUnits":[{"id":"id_mensch_und_metropole","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","divId":"div-gpt-ad-billboard1","targeting":[{"key":"Billboardslot","value":["Pos1"]}],"size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_politik_und_gesellschaft","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos2"]}],"divId":"div-gpt-ad-billboard2","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_wirtschaft_und_verantwortung","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos3"]}],"divId":"div-gpt-ad-billboard3","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_zukunft_und_technologie","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos4"]}],"divId":"div-gpt-ad-billboard4","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_sport_und_leidenschaft","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos5"]}],"divId":"div-gpt-ad-billboard5","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_kultur_und_vergnuegen","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos6"]}],"divId":"div-gpt-ad-billboard6","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_stil_und_individualitaet","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos7"]}],"divId":"div-gpt-ad-billboard7","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_gesundheit_und_oekologie","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos8"]}],"divId":"div-gpt-ad-billboard8","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_lernen_und_arbeiten","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos9"]}],"divId":"div-gpt-ad-billboard9","size":[[728,90],[970,90],[800,250],[970,250]]}],"gAdUnits":[{"id":"ad-article-sidebar","type":["article"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle","size":[[300,250],[301,600]]},{"id":"ad-article-content-1","type":["article"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle1","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos1"]}]},{"id":"ad-article-content-2","target":"mobile","type":["article"],"path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle2","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos2"]}]},{"id":"ad-top-mobile","type":["article","page"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-mpu","size":[[300,250]]},{"id":"ad-top-desktop","type":["article","page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-leaderboard-0","size":[[728,90],[970,250],[970,90]]}]}}
+    if (window.dataLayer && window.fbq) {
+      const sessionIdCookie = getCookie('MPP-SessionId') || ''
+      const userIdCookie = getCookie('MPP-UserId') || ''
+      const bothMppCookiesExist = sessionIdCookie && userIdCookie
+      const noneMppCookiesExist = !sessionIdCookie && !userIdCookie
+
+      if (bothMppCookiesExist || noneMppCookiesExist) {
+        dataLayer.push({
+          'event': 'articleImpressions',
+          'userID': userIdCookie,
+          'sessionID': sessionIdCookie,
+          'articleTitle': metadataObj.title, //use page title
+          'articleId': id, //use livingdocs id where applicable
+          'articleCategory': categoryObj.label //use livingdocs section (“Ressort”) value where applicable
+        });
+        fbq('track', 'PageView', {});
+      }
+    }
+  }
+</script>
+
+        <meta name="robots" content="index, follow, noarchive, noodp">
+  <meta name="copyright" content="Berliner Zeitung">
+  <meta name="author" content="Berliner Zeitung">
+  <meta name="description" content="Naturschützer und Zoologen rufen die Berliner zum Zählen der Feldhasen und Wildkaninchen auf. Vor allem im Ostteil ist immer öfter der echte Hase zu sehen." />
+    <meta name="keywords" content="Forscher, Berlin, Hasen, Jagd, Zählaktion, Nabu, IZW" />
+
+      
+    <meta property="og:title" content="Berliner Forscher bitten zu Ostern zur Hasenjagd" />
+    <meta property="og:description" content="Naturschützer und Zoologen rufen die Berliner zum Zählen der Feldhasen und Wildkaninchen auf. Vor allem im Ostteil ist immer öfter der echte Hase zu sehen." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.berliner-zeitung.de/mensch-metropole/berliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204" />
+    <meta property="og:image" content="https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?w=1200&amp;h=630&amp;fit=crop&amp;crop=faces" />
+  <meta property="og:locale" content="de">
+  <meta property="og:site_name" content="Berliner Zeitung" />
+  
+    <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@berlinerzeitung">
+
+  <title>
+    Berliner Forscher bitten zu Ostern zur Hasenjagd
+  </title>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.berliner-zeitung.de/mensch-metropole/berliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204"
+    
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.berliner-zeitung.de/mensch-metropole/berliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204"
+    },
+    "headline": "Berliner Forscher bitten zu Ostern zur Hasenjagd",
+    "datePublished": "2021-04-02T13:17:33.216Z",
+"dateModified": "2021-04-02T13:30:42.747Z","description": "Naturschützer und Zoologen rufen die Berliner zum Zählen der Feldhasen und Wildkaninchen auf. Vor allem im Ostteil ist immer öfter der echte Hase zu sehen.",    "copyrightHolder": "Berliner Zeitung",
+    "author": {
+      "@type": "Organization",
+      "name": "Berliner Zeitung",
+      "sameAs": "https://www.berliner-zeitung.de"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Berliner Zeitung",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.berliner-zeitung.de/logo-blz.png",
+        "width": 678,
+        "height": 104
+      }
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?w=1024&amp;auto=format",
+      "height": 900,
+      "width": 1348
+    }
+  }
+</script>
+  <link rel="canonical" href="https://www.berliner-zeitung.de/mensch-metropole/berliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204" />
+  <link rel="amphtml" href="https://www.berliner-zeitung.de/mensch-metropole/berliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204.amp" />
+  <meta name=”robots” content=”max-image-preview:large, max-snippet:200 ” >
+
+      <script type="text/javascript">
+    (function() {
+      /** CONFIGURATION START **/
+      var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+      _sf_async_config.uid = 66027;
+      _sf_async_config.domain = 'berliner-zeitung.de';
+      _sf_async_config.flickerControl = false;
+      _sf_async_config.useCanonical = true;
+      _sf_async_config.useCanonicalDomain = true;
+        _sf_async_config.sections = 'id_mensch_und_metropole';
+        _sf_async_config.authors = 'Norbert Koch-Klaucke';
+    })();
+      /** CONFIGURATION END **/
+      const loadChartbeat = () => {
+        const chartbeatSrc = '//static.chartbeat.com/js/chartbeat.js'
+        var e = document.createElement('script');
+        var chartBeatScripts = document.getElementsByTagName('script');
+        for(item of chartBeatScripts){
+          if(item.src && item.src.endsWith(chartbeatSrc)){
+            item.parentNode.removeChild(item);
+          }
+        }
+        e.type = 'text/javascript';
+        e.async = true;
+        e.src = chartbeatSrc;
+        chartBeatScripts[0].parentNode.insertBefore(e, chartBeatScripts[0]);
+
+        const chartbeatMabSrc = '//static.chartbeat.com/js/chartbeat_mab.js'
+        var g = document.createElement('script');
+        g.type = 'text/javascript';
+        g.async = true;
+        g.src = chartbeatMabSrc;
+        chartBeatScripts[0].parentNode.insertBefore(g, chartBeatScripts[1]);
+
+      }
+      if(!window._sf_load_function){
+        window._sf_load_chartbeat = loadChartbeat;
+      }
+  </script>
+
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
+  <script type="text/javascript">
+
+    var fingerprintReport = function () {
+      Fingerprint2.get(function (components) {
+        var murmur = Fingerprint2.x64hash128(components.map(function (pair) {
+          return pair.value
+        }).join(), 31)
+        setCookie('AccessToken', murmur, 100)
+      })
+    }
+  </script>
+
+
+<link href="https://www.berliner-zeitung.de/designs/berliner-zeitung/2.0.227/styles.css" rel="stylesheet">
+      <script>
+    function loadDoubleClickHead() {
+      if(!document.getElementById('doubleClickTag')){
+        var e = document.createElement('script');
+        e.id = 'doubleClickTag'
+        e.type = 'text/javascript'
+        e.async = true;
+        e.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+        document.head.appendChild(e)
+
+        window.googletag = window.googletag || {cmd: []};
+        let publicationType = 'article'
+
+        googletag.cmd.push(function() {
+          let categoryObj = {"id":"id_mensch_und_metropole","label":"Mensch & Metropole","path":"/mensch-metropole","parent":"id_home","metadata":{"tagManager":"UA-XXXXXXXX-X","analytics":"UA-XXXXXXXX-X","ivwPixelId":"bar","homePageGAdUnits":[{"id":"id_mensch_und_metropole","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","divId":"div-gpt-ad-billboard1","targeting":[{"key":"Billboardslot","value":["Pos1"]}],"size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_politik_und_gesellschaft","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos2"]}],"divId":"div-gpt-ad-billboard2","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_wirtschaft_und_verantwortung","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos3"]}],"divId":"div-gpt-ad-billboard3","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_zukunft_und_technologie","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos4"]}],"divId":"div-gpt-ad-billboard4","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_sport_und_leidenschaft","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos5"]}],"divId":"div-gpt-ad-billboard5","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_kultur_und_vergnuegen","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos6"]}],"divId":"div-gpt-ad-billboard6","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_stil_und_individualitaet","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos7"]}],"divId":"div-gpt-ad-billboard7","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_gesundheit_und_oekologie","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos8"]}],"divId":"div-gpt-ad-billboard8","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_lernen_und_arbeiten","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos9"]}],"divId":"div-gpt-ad-billboard9","size":[[728,90],[970,90],[800,250],[970,250]]}],"gAdUnits":[{"id":"ad-article-sidebar","type":["article"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle","size":[[300,250],[301,600]]},{"id":"ad-article-content-1","type":["article"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle1","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos1"]}]},{"id":"ad-article-content-2","target":"mobile","type":["article"],"path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle2","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos2"]}]},{"id":"ad-top-mobile","type":["article","page"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-mpu","size":[[300,250]]},{"id":"ad-top-desktop","type":["article","page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-leaderboard-0","size":[[728,90],[970,250],[970,90]]}]}}
+              categoryObj.metadata.gAdUnits.forEach(function (item) {
+                  if(item.path && item.size && item.divId && item.type && item.type.includes(publicationType)){
+                      const slot = googletag.defineSlot(item.path, item.size, item.divId)
+                      if(item.targeting && item.targeting.length > 0){
+                          item.targeting.forEach(function (item) {
+                              slot.setTargeting(item.key, item.value)
+                          })
+                      }
+                      slot.addService(googletag.pubads());
+                  }
+              })
+          if(window.location.pathname === '/'){
+                  categoryObj.metadata.homePageGAdUnits.forEach(function (item) {
+                      if(item.path && item.size && item.divId && item.type && item.type.includes(publicationType)){
+                              const slot = googletag.defineSlot(item.path, item.size, item.divId)
+                              if(item.targeting && item.targeting.length > 0){
+                                  item.targeting.forEach(function (item) {
+                                      slot.setTargeting(item.key, item.value)
+                                  })
+                              }
+                              slot.addService(googletag.pubads());
+                      }
+                  })
+          }
+          googletag.pubads().enableSingleRequest();
+          googletag.pubads().collapseEmptyDivs();
+          googletag.enableServices();
+          // internal ad should be shown only if there is ad blocker
+          //googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          //    if(event.isEmpty){
+          //        if(document.getElementById('replacedByGoogleAdUnit')){
+          //            document.getElementById('replacedByGoogleAdUnit').removeAttribute("style")
+          //        }
+          //    }
+          //});
+        });
+      }
+    }
+  </script>
+
+  </head>
+  <body>
+
+    <img src="//berliner-zeitung.met.vgwort.de/na/vgzm.9205523-150204" loading="eager" data-qa="vg-wort-pixel" alt="" width="1" height="1" style="display:none">
+
+  <div class="main-wrapper">
+    
+<div class="main-header-wrapper">
+  <div class="main-header">
+
+    
+    <div class="o-header o-header--main o-header-lg container">
+
+      
+
+      <div class="main-logobar__left">
+       <div class="main-logobar">
+          <a class="a-logo" href="/"></a>
+              <a class="logobar-link" href="https://www.berliner-zeitung.de/opensource.102233" target="_blank"><span class="a-chevron"></span>Open Source</a>
+              <a class="logobar-link" href="https://www.berliner-zeitung.de/missstandshinweis.226" target="_self"><span class="a-chevron"></span>Whistleblowing</a>
+              <a class="logobar-link" href="https://aboshop.berliner-zeitung.de/" target="_blank"><span class="a-chevron"></span>Abonnements</a>
+        </div>
+      </div>
+
+      <div class="main-logobar__right">
+        <div class="main-logobar__top">
+          <div class="main-logobar__navigation">
+            <a href="#" class="a-icon a-icon--small a-icon--search js-icon--search__logobar"></a>
+            <a class="a-icon a-icon--small a-icon--burger js-icon--burger"></a>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="main-logobar__bottom">
+          <ul class="m-meta-navigation__list">
+              <li class="m-meta-navigation__item aboshop-link">
+                <a href="https://www.berliner-zeitung.de/opensource.102233" target="_blank">Open Source</a>
+              </li>
+                <li class="link-login js-loginLink m-meta-navigation__item"></li>
+                  <li class="m-meta-navigation__item aboshop-link">
+                    <a href="https://aboshop.berliner-zeitung.de/" target="_blank">Abonnements</a>
+                  </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+      
+    <div class="blz-sidebarnavi__wrapper">
+      <div class="a-overlay-blz js-overlay"></div>
+      <div class="blz-sidebarnavi js-sidebarnavi">
+        <div class="sidebar-content">
+          <div class="sidebar-content-wrapper">
+
+            <div class="blz-sidebarnavi__header">
+                <ul class="blz-sidebarnavi__languages">
+                    <li class="blz-sidebarnavi__lang-item">
+                      <a
+                        href="/"
+                      >
+                        Deutsch
+                      </a>
+                    </li>
+                    <li class="blz-sidebarnavi__lang-item">
+                      <a
+                        href="/en"
+                      >
+                        English
+                      </a>
+                    </li>
+                </ul>
+
+              <div class="blz-sidebar-mobile-closer ">
+                <a href="#" class="a-icon a-icon--small a-icon--search-white js-icon--search__sidebar"></a>
+                <a class="a-icon a-icon--small a-icon--close-white js-sidebar-mobile-closer"></a>
+              </div>
+            </div>
+
+           <div class="m-sidebar-search">
+            <input type="text" class="m-sidebar-search__input js-sidebar-search__input" placeholder="Suchen" />
+          </div>
+
+          <div class="blz-sidebarnavi__top">
+            <a href="https://aboshop.berliner-zeitung.de" class="blz-sidebarnavi__button blz-sidebarnavi__button-subscribe">Abonnieren</a>
+            <div class="blz-sidebarnavi__button blz-sidebarnavi__button-login js-loginText"></div>
+          </div>
+
+          <div class="sidebar-category">
+            <p>Mein Profil</p>
+          </div>
+          <ul class="blz-sidebar-nav blz-sidebar-nav--primary">
+                <li class="blz-sidebar-nav__item">
+                  <a href="https://account.berliner-zeitung.de/home/mein-abo"
+                  >
+                  Lieferadresse</a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a href="https://account.berliner-zeitung.de/"
+                  >
+                  Einstellungen</a>
+                </li>
+          </ul>
+
+            <div class="sidebar-category">
+              <p>Themen</p>
+            </div>
+            <ul class="blz-sidebar-nav blz-sidebar-nav--primary">
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/politik-gesellschaft"
+                  >
+                    Politik
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/mensch-metropole"
+                  >
+                    Berlin
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/wirtschaft-verantwortung"
+                  >
+                    Wirtschaft
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/sport-leidenschaft"
+                  >
+                    Sport
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/kultur-vergnuegen"
+                  >
+                    Kultur
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/stil-individualitaet"
+                  >
+                    Stil
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/lernen-arbeiten"
+                  >
+                    Lernen
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/zukunft-technologie"
+                  >
+                    Technologie
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/gesundheit-oekologie"
+                  >
+                    Gesundheit
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/news"
+                  >
+                    News
+                  </a>
+                </li>
+            </ul>
+
+            
+            <div class="sidebar-category">
+              <p>Von der Berliner Zeitung</p>
+            </div>
+            <ul class="blz-sidebar-nav blz-sidebar-nav--primary">
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="https://www.berliner-zeitung.de/opensource.102233"
+ target="_self"                  >
+                    Open Source
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/missstandshinweis.226"
+ target="_self"                  >
+                    Whistleblowing
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/podcast"
+ target="_self"                  >
+                    Podcast
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="https://epaper.berliner-zeitung.de"
+ target="_blank" rel="noopener noreferrer"                   >
+                    E-Paper
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="https://www.berliner-zeitung.de/en/the-berliner-zeitung-english-edition-weekly-newsletter-li.140604"
+ target="_self"                  >
+                    English-Newsletter
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="https://www.berliner-zeitung.de/kultur-vergnuegen/rausgehen-der-freizeit-newsletter-der-berliner-zeitung-li.108033"
+ target="_self"                  >
+                    Freizeit-Newsletter
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="https://www.berliner-zeitung.de/corona-update-li.78595"
+                  >
+                    Corona-Newsletter
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="https://www.berliner-zeitung.de/autoren"
+ target="_blank" rel="noopener noreferrer"                   >
+                    Redaktionen
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/kontakt.228"
+                  >
+                    Kontakt
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/karriere-und-jobs"
+                  >
+                    Karriere
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="/transformation"
+                  >
+                    Transformation
+                  </a>
+                </li>
+                <li class="blz-sidebar-nav__item">
+                  <a
+                    href="https://aboshop.berliner-zeitung.de/faq"
+ target="_self"                  >
+                    FAQs
+                  </a>
+                </li>
+            </ul>
+            
+
+            <div class="sidebar-category">
+              <p>Unsere Social Media Kanäle</p>
+            </div>
+
+            <div class="a-socialbutton-container">
+              <div class="a-socialbutton">
+                <a class="a-socialbutton__link" href="https://twitter.com/berlinerzeitung">
+                  <span class="a-icon a-icon--socialbutton a-icon--twitter-white"></span>
+                </a>
+              </div>
+              <div class="a-socialbutton">
+                <a class="a-socialbutton__link" href="https://www.facebook.com/berlinerzeitung/">
+                  <span class="a-icon a-icon--socialbutton a-icon--facebook-white"></span>
+                </a>
+              </div>
+              <div class="a-socialbutton">
+                <a class="a-socialbutton__link" href="https://www.instagram.com/berliner_zeitung/">
+                  <span class="a-icon a-icon--socialbutton a-icon--instagram-white-new"></span>
+                </a>
+              </div>
+              <div class="a-socialbutton">
+                <a class="a-socialbutton__link" href="https://www.linkedin.com/company/berliner-zeitung">
+                  <span class="a-icon a-icon--socialbutton a-icon--linkedin-white"></span>
+                </a>
+              </div>
+              <div class="a-socialbutton">
+                <a class="a-socialbutton__link" href="https://www.youtube.com/channel/UCOK_An4e3Um5pkziO3e1Qyw">
+                  <span class="a-icon a-icon--socialbutton a-icon--youtube-white"></span>
+                </a>
+              </div>
+              <div class="a-socialbutton">
+                <a class="a-socialbutton__link" href="http://t.me/berlinerzeitung">
+                  <span class="a-icon a-icon--socialbutton a-icon--telegram-white"></span>
+                </a>
+              </div>
+            </div>
+
+            <ul class="blz-sidebar-nav blz-sidebar-nav--primary blz-sidebar-nav-desktop">
+              <li class="blz-sidebar-nav__item">
+                <a
+                  href="/allgemeine-nutzungsbedingungen.235"
+ target="_self"                >
+                  AGB
+                </a>
+              </li>
+              <li class="blz-sidebar-nav__item">
+                <a
+                  href="/datenschutzhinweise.729"
+ target="_self"                >
+                  Datenschutzhinweise
+                </a>
+              </li>
+              <li class="blz-sidebar-nav__item">
+                <a
+                  href="/impressum.88593"
+ target="_self"                >
+                  Impressum
+                </a>
+              </li>
+            </ul>
+            <ul class="blz-sidebar-nav blz-sidebar-nav--primary blz-sidebar-nav-mobile">
+              <li class="blz-sidebar-nav__item">
+                <a
+                  href="/allgemeine-nutzungsbedingungen.235"
+                >
+                  Allgemeine Nutzungsbedingungen
+                </a>
+              </li>
+              <li class="blz-sidebar-nav__item">
+                <a
+                  href="/datenschutzhinweise.729"
+                >
+                  Datenschutzerklärung
+                </a>
+              </li>
+              <li class="blz-sidebar-nav__item">
+                <a
+                  href="/impressum.88593"
+                >
+                  Impressum
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="o-header o-header--main o-header-sm">
+      <div class="o-header-sm-wrapper container">
+        <div class="main-logobar__left">
+          <div class="main-logobar">
+            <a class="a-logo" href="/"></a>
+          </div>
+        </div>
+
+        <div class="main-logobar__right">
+          <div class="main-logobar__top">
+            <ul class="m-meta-navigation__list">
+                <li class="m-meta-navigation__item aboshop-link">
+                  <a href="https://www.berliner-zeitung.de/opensource.102233" target="_blank">Open Source</a>
+                </li>
+              <li class="link-login js-loginLink m-meta-navigation__item"></li>
+                    <li class="m-meta-navigation__item aboshop-link">
+                      <a href="https://aboshop.berliner-zeitung.de/" target="_blank">Abonnements</a>
+                    </li>
+            </ul>
+            <div class="main-logobar__navigation">
+              <a href="#" class="a-icon a-icon--small a-icon--search js-icon--search__logobar"></a>
+              <a class="a-icon a-icon--small a-icon--burger js-icon--burger"></a>
+            </div>
+          </div>
+          <div class="main-logobar__mid">
+            <a href="https://aboshop.berliner-zeitung.de">
+              <div class="aboshop-button">
+                <div class="aboshop-text">Abonnieren</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blz-navigation container">
+        <div class="m-main-navigation" data-t-name="Mainnavigation">
+          <div class="m-main-navigation__content">
+              <span class="m-main-navigation__chevron m-main-navigation__chevron--left"></span>
+              <div class="m-main-navigation__scroller">
+                <ul class="m-main-navigation__list">
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/politik-gesellschaft"
+                      >
+                        Politik &amp; Gesellschaft
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/mensch-metropole"
+                      >
+                        Mensch &amp; Metropole
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/wirtschaft-verantwortung"
+                      >
+                        Wirtschaft &amp; Verantwortung
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/sport-leidenschaft"
+                      >
+                        Sport &amp; Leidenschaft
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/kultur-vergnuegen"
+                      >
+                        Kultur &amp; Vergnügen
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/stil-individualitaet"
+                      >
+                        Stil &amp; Individualität
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/lernen-arbeiten"
+                      >
+                        Lernen &amp; Arbeiten
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/zukunft-technologie"
+                      >
+                        Zukunft &amp; Technologie
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/gesundheit-oekologie"
+                      >
+                        Gesundheit &amp; Ökologie
+                      </a>
+                    </li>
+                    <li class="m-main-navigation__item">
+                      <a
+                        href="/news"
+                      >
+                        News &amp; Schlagzeilen
+                      </a>
+                    </li>
+                </ul>
+              </div>
+              <span class="m-main-navigation__chevron m-main-navigation__chevron--right m-main-navigation__chevron--active"></span>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    
+    <div class="m-header-search">
+      <div class="container m-header-search-inner-wrapper">
+        <div class="search-input-wrapper">
+          <input type="text" class="header-input js-sidebar-search__input" placeholder="Suchen" />
+        </div>
+        <a class="a-icon a-icon--small a-icon--close-blk js-header-search-closer"></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="separator-container" class="container">
+    <hr class="a-separator a-separator__header a-separator--full-width" />
+  </div>
+
+    
+
+    
+    <div class="blz-navigation container">
+      <div class="m-main-navigation" data-t-name="Mainnavigation">
+        <div class="m-main-navigation__content">
+            <span class="m-main-navigation__chevron m-main-navigation__chevron--left"></span>
+            <div class="m-main-navigation__scroller">
+              <ul class="m-main-navigation__list">
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/politik-gesellschaft"
+                    >
+                      Politik &amp; Gesellschaft
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/mensch-metropole"
+                    >
+                      Mensch &amp; Metropole
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/wirtschaft-verantwortung"
+                    >
+                      Wirtschaft &amp; Verantwortung
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/sport-leidenschaft"
+                    >
+                      Sport &amp; Leidenschaft
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/kultur-vergnuegen"
+                    >
+                      Kultur &amp; Vergnügen
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/stil-individualitaet"
+                    >
+                      Stil &amp; Individualität
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/lernen-arbeiten"
+                    >
+                      Lernen &amp; Arbeiten
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/zukunft-technologie"
+                    >
+                      Zukunft &amp; Technologie
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/gesundheit-oekologie"
+                    >
+                      Gesundheit &amp; Ökologie
+                    </a>
+                  </li>
+                  <li class="m-main-navigation__item">
+                    <a
+                      href="/news"
+                    >
+                      News &amp; Schlagzeilen
+                    </a>
+                  </li>
+              </ul>
+            </div>
+            <span class="m-main-navigation__chevron m-main-navigation__chevron--right m-main-navigation__chevron--active"></span>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="blz-subscriptions-banner blz-subscription-banner__no-slider">
+      <div class="container">
+        <h6><a class="pink-banner" href="https://aboshop.berliner-zeitung.de" target="_blank">Wir sind unabhängig und wollen es bleiben. Unterstützen Sie uns dabei?</a></h6>
+      </div>
+    </div>
+</div>
+
+<script>
+  (function() {
+    function getCookie(name) {
+      var dc = document.cookie;
+      var prefix = name + "=";
+      var begin = dc.indexOf("; " + prefix);
+      if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) {
+          return null;
+        }
+      } else {
+        begin += 2;
+        var end = document
+          .cookie
+          .indexOf(";", begin);
+        if (end == -1) {
+          end = dc.length;
+        }
+      }
+      return decodeURI(dc.substring(begin + prefix.length, end));
+    }
+
+    function findDomain() {
+      const domainArray = window
+        .location
+        .host
+        .split('.')
+      domainArray.shift()
+      return domainArray.join('.')
+    }
+
+    const redirectDomain = (register) => {
+      const domain = findDomain() || "berliner-zeitung.dev"
+      const currentPage = window.location.href.split('?')[0]
+      return `https://account.${domain}${register ? '/auth/register?rid=' + currentPage : ''}`
+    };
+
+    const loginLinkContainer = Array.from(document.getElementsByClassName("js-loginLink"));
+    const loginTextContainer = Array.from(document.getElementsByClassName("js-loginText"));
+    const aboshopBanner = document.getElementById('aboshop-banner');
+    const aboshopBannerSmall = document.getElementById('aboshop-banner--sm');
+    const separatorContainer = document.getElementById("separator-container");
+    // const loginIconContainer = document.getElementById("loginIcon")
+    const mppSessionId = getCookie("MPP-SessionId");
+    // add class if there is session with mpp
+    if(mppSessionId && document.getElementsByClassName("main-header").length > 0) {
+      const mainHeader = document.getElementsByClassName("main-header")[0]
+      var classString = mainHeader.className;
+      var newClass = classString.concat(" logged-in");
+      mainHeader.className = newClass;
+      aboshopBanner && aboshopBanner.remove()
+      aboshopBannerSmall && aboshopBannerSmall.remove()
+      separatorContainer && separatorContainer.remove()
+    }
+    if (loginLinkContainer) {
+      if (!mppSessionId) {
+        loginLinkContainer.forEach(el => {
+          el.innerHTML = `<a href="${redirectDomain(true)}" class="m-meta-navigation__link">Anmelden</a>`
+        })
+
+      } else {
+        loginLinkContainer.forEach(el => {
+          el.innerHTML = `<a href="${redirectDomain(false)}">Konto</a>`
+        })
+      }
+    }
+    if (loginTextContainer) {
+      if (!mppSessionId) {
+        loginTextContainer.forEach(el => {
+          el.innerHTML = `<div class="js-loginButton">Anmelden</div>`
+        })
+      } else {
+        loginTextContainer.forEach(el => {
+          el.innerHTML = `<div class="js-logoutButton">Abmelden</div>`
+        })
+      }
+    }
+  })()
+</script>
+    
+  
+  <div class="page container container--article">
+    <div class="ad-top-desktop">          <script>
+    if (!window.doubleClickBody) window.doubleClickBody = {}
+    function appendAdUnit() {
+      window.unitObj = {"id":"ad-top-desktop","type":["article","page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-leaderboard-0","size":[[728,90],[970,250],[970,90]]}
+      window.adClass = 'm-ad-unit--top'
+      if (document.getElementsByClassName(window.unitObj.id)[0]){
+        document.getElementById(window.unitObj.divId) && document.getElementById(window.unitObj.divId).remove()
+        var e = document.createElement('div');
+        e.id = window.unitObj.divId
+        window.adClass && e.classList.add(window.adClass)
+        let classList
+        e.classList.add("m-ad-unit")
+        classList && e.classList.add(classList)
+
+        const script = document.createElement('script')
+        script.innerHTML = `googletag.cmd.push(function() { googletag.display('${window.unitObj.divId}') });`
+
+        e.appendChild(script)
+
+        document.getElementsByClassName(window.unitObj.id)[0].appendChild(e)
+      }
+    }
+    window.doubleClickBody['ad-top-desktop'] = appendAdUnit
+    window.unitObj = undefined
+    window.adClass = ''
+  </script>
+
+</div>
+    <div class="ad-top-mobile">          <script>
+    if (!window.doubleClickBody) window.doubleClickBody = {}
+    function appendAdUnit() {
+      window.unitObj = {"id":"ad-top-mobile","type":["article","page"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-mpu","size":[[300,250]]}
+      window.adClass = 'm-ad-unit--top-mobile'
+      if (document.getElementsByClassName(window.unitObj.id)[0]){
+        document.getElementById(window.unitObj.divId) && document.getElementById(window.unitObj.divId).remove()
+        var e = document.createElement('div');
+        e.id = window.unitObj.divId
+        window.adClass && e.classList.add(window.adClass)
+        let classList
+          classList = 'm-ad-unit--mobile'
+        e.classList.add("m-ad-unit")
+        classList && e.classList.add(classList)
+
+        const script = document.createElement('script')
+        script.innerHTML = `googletag.cmd.push(function() { googletag.display('${window.unitObj.divId}') });`
+
+        e.appendChild(script)
+
+        document.getElementsByClassName(window.unitObj.id)[0].appendChild(e)
+      }
+    }
+    window.doubleClickBody['ad-top-mobile'] = appendAdUnit
+    window.unitObj = undefined
+    window.adClass = ''
+  </script>
+
+</div>
+    <div class="row o-article-blz"><div class="col-xs-12"><div class="row"><div class="col-lg-5"><div><div class="m-header"><span class="a-catchline">Z&#xE4;hlaktion</span> <span class="smart-hide">:</span><h1 class="a-storyhead">Berliner Forscher bitten zu Ostern zur Hasenjagd</h1><p class="a-storylead">Natursch&#xFC;tzer und Zoologen rufen die Berliner zum Z&#xE4;hlen der Feldhasen und Wildkaninchen auf. Vor allem im Ostteil ist immer &#xF6;fter der echte Hase zu sehen.&#xA0;</p><p class="a-author date-and-author">
+      <span class="ld-author-replace"><a href="/autoren/norbert-koch-klaucke--li.750">Norbert Koch-Klaucke</a></span>, <span class="ld-date-replace">2.4.2021 - 15:17 Uhr</span>
+    </p><div class="audio-article">Artikel anh&#xF6;ren <span class="audio"></span></div></div></div></div><div class="col-lg-7"><div><figure class="figure c-image" data-component-name="Image"><div class="c-image__imagewrapper"><img class="c-image__image lazyload" data-src="https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&amp;w=1024&amp;auto=format" data-srcset="https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&amp;w=1024&amp;auto=format 1024w,https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&amp;w=750&amp;auto=format 750w,https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&amp;w=620&amp;auto=format 620w,https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&amp;w=450&amp;auto=format 450w,https://berliner-zeitung.imgix.net/2021/4/2/48970af8-1b81-4c24-bdd0-19613c31441c.jpeg?rect=0%2C71%2C1348%2C758&amp;w=320&amp;auto=format 320w" data-sizes="(min-width: 1024px) 994px,(min-width: 768px) 726px,(min-width: 480px) 428px,100vw"></div><figcaption class="c-image__text-group figcaption"><div class="c-image__source-group"><span class="c-image__text hide-editor" style="display: none;"></span> <span class="c-image__text">Nabu/Dieter K&#xF6;hler</span></div><span class="c-image__text">Der Feldhase erobert Berlin. In den &#xF6;stlichen Wohngebieten l&#xE4;sst er sich gerne blicken.&#xA0;</span></figcaption></figure></div></div></div><div class="row"><div class="col-xs-12 col-lg-12"><div class="row"><div class="col-lg-8 col-xs-12 main-content"><div class="m-share m-share-md"><hr><div class="m-socialbar m-socialbar--article"><div class="a-socialbutton"><a class="a-socialbutton__link" rel="noopener noreferrer" target="_blank" data-service="facebook" alt="Auf Facebook teilen" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.berliner-zeitung.de%2Fmensch-metropole%2Fberliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204"><span class="a-icon a-icon--socialbutton a-icon--facebook"></span></a></div><div class="a-socialbutton"><a class="a-socialbutton__link" rel="noopener noreferrer" target="_blank" data-service="twitter" alt="Auf Twitter teilen" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.berliner-zeitung.de%2Fmensch-metropole%2Fberliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204&amp;text=Berliner%20Forscher%20bitten%20zu%20Ostern%20zur%20Hasenjagd"><span class="a-icon a-icon--socialbutton a-icon--twitter"></span></a></div><div class="a-socialbutton"><a class="a-socialbutton__link" rel="noopener noreferrer" target="_blank" data-service="whatsapp" alt="Auf Whatsapp teilen" href="whatsapp://send?text=https%3A%2F%2Fwww.berliner-zeitung.de%2Fmensch-metropole%2Fberliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204"><span class="a-icon a-icon--socialbutton a-icon--whatsapp"></span></a></div></div></div><div class="o-article" data-t-name="Article"><p class="a-paragraph" data-t-name="Lead Paragraph"><span class="a-paragraph-opener">Berlin</span> - <span>&#xA0;Wer dieser Tage zum Osterspaziergang aufbricht, sollte Block und Bleistift mitnehmen. Das w&#xFC;nschen sich zumindest Wildtierforscher. Die Berlinerinnen und Berliner m&#xF6;gen doch Ausschau halten nach Feldhasen und Wildkaninchen, ihre Beobachtungen notieren und melden. Das Leibniz-Institut f&#xFC;r Zoo- und Wildtierforschung (IZW) und der Naturschutzbund (Nabu) haben ein gro&#xDF;es Interesse an der Gr&#xF6;&#xDF;e und Verbreitung der Populationen. Denn w&#xE4;hrend in Brandenburg der Feldhase sich auf dem Land vom Acker macht, hat er vor allem in den Plattenbausiedlungen im Osten Berlins offenbar ein neues Zuhause gefunden.&#xA0;</span></p><p class="a-paragraph" data-t-name="Paragraph">Es ist schon kurios. Wildtiere verlassen immer mehr ihre urspr&#xFC;nglichen Naturreviere wie W&#xE4;lder oder Felder und ziehen in die St&#xE4;dte. F&#xFC;chse, Steinmarder oder Waschb&#xE4;ren streifen bereits seit Jahren ohne Scheu durch Berliner Wohnsiedlungen, Biber bauen im Tiergarten Burgen, Falken nisten in Kircht&#xFC;rmen. Sogar Seem&#xF6;wen fliegen fern der Ostsee &#xFC;ber den Alexanderplatz und haben Brutpl&#xE4;tze auf den D&#xE4;chern der anliegenden H&#xE4;usern. &#x201E;Weil diese Tiere in der Stadt, etwa durch die Abf&#xE4;lle seiner Bewohner, mittlerweile bessere Nahrungs- und Lebensbedingungen vorfinden&#x201C;, erkl&#xE4;rt Nabu-Wildtierexpertin Katrin Koch den Umzug der Tiere.</p><div class="ad-article-content-1"></div><div class="sidebar-section"><div class="embed-container">
+<div class="m-teasergroup">
+  <div class="m-teasergroup__single">
+    <div class="teaser-short">
+      <a href="/gesundheit-oekologie/bald-ist-ostern-wie-geht-es-eigentlich-dem-feldhasen-li.146925">
+        
+          <div class="teaser__img-wrap">
+            <img class="teaser__img lazyload" data-src="https://berliner-zeitung.imgix.net/2021/3/18/149610d0-8823-46be-adbc-e210b70cd2d0.jpeg?rect=0%2C1381%2C3189%2C1794&amp;w=1024&amp;auto=format" data-srcset="https://berliner-zeitung.imgix.net/2021/3/18/149610d0-8823-46be-adbc-e210b70cd2d0.jpeg?rect=0%2C1381%2C3189%2C1794&amp;w=1024&amp;auto=format 1024w,https://berliner-zeitung.imgix.net/2021/3/18/149610d0-8823-46be-adbc-e210b70cd2d0.jpeg?rect=0%2C1381%2C3189%2C1794&amp;w=750&amp;auto=format 750w,https://berliner-zeitung.imgix.net/2021/3/18/149610d0-8823-46be-adbc-e210b70cd2d0.jpeg?rect=0%2C1381%2C3189%2C1794&amp;w=620&amp;auto=format 620w,https://berliner-zeitung.imgix.net/2021/3/18/149610d0-8823-46be-adbc-e210b70cd2d0.jpeg?rect=0%2C1381%2C3189%2C1794&amp;w=450&amp;auto=format 450w,https://berliner-zeitung.imgix.net/2021/3/18/149610d0-8823-46be-adbc-e210b70cd2d0.jpeg?rect=0%2C1381%2C3189%2C1794&amp;w=320&amp;auto=format 320w" data-sizes="140px" data-width="3189" data-height="1794">
+            
+          </div>
+        
+        <div class="teaser__text">
+          <p class="teaser__title">
+          <span class="a-flag ">Tier des Tages</span>Bald ist Ostern: Wie geht es eigentlich dem Feldhasen?
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div></div></div><p class="a-paragraph" data-t-name="Paragraph">Auch bei den Feldhasen, von denen es &#xFC;ber drei Millionen in Deutschland gibt und deren Art bundesweit als gef&#xE4;hrdet gilt, ist der Mensch der Grund, warum sie nun vermehrt in Berlin anzutreffen sind, so die Fachfrau. Die Tiere fl&#xFC;chten quasi aus Brandenburg, wo durch die Intensivierung der Landwirtschaft ihre Lebensr&#xE4;ume vernichtet werden. Der Abbau von nat&#xFC;rlichen Wiesen nimmt ihnen die Nahrungsgrundlage. Die st&#xE4;ndige Bewirtschaftung der Felder w&#xFC;rde den Feldhasen zudem ihr Zuhause nehmen, wo sie normalerweise Schutz vor Feinden wie F&#xFC;chse und Greifv&#xF6;gel finden.</p><h2 class="a-subtitle">Hasen haben sich am Leben in der Stadt angepasst&#xA0;</h2><p class="a-paragraph" data-t-name="Paragraph">Anders in Berlin: Da tummeln sich die Feldhasen auf Gr&#xFC;nfl&#xE4;chen zwischen Wohnblocks, balzen auf Spielpl&#xE4;tzen, &#xFC;berqueren routiniert Stra&#xDF;en und lassen sich selbst von Hunden nicht aus der Ruhe bringen. &#x201E;Hasen sind lernf&#xE4;hig und sehen Menschen in der Stadt nicht als Feinde an&#x201C;, sagt Hasen-Experte Dieter K&#xF6;hler vom NABU Berlin. &#x201E;Hier beobachtet man Szenen, die man sich in der Feldflur nicht vorstellen kann.&#x201C; Die Hasen h&#xE4;tten sich erstaunlich schnell an das Leben in der Gro&#xDF;stadt angepasst.</p><div class="ad-article-content-2"></div><p class="a-paragraph" data-t-name="Paragraph">Als Feldhasen-Hochburg gilt der Osten Berlins. Erste Beobachtungen ergaben, dass diese Hasen besonders in Lichtenberg in der Gegend um den Tierpark oder rings um die Wohnsiedlungen von Marzahn-Hellersdorf zu finden sind. &#x201E;Vor allem in den gr&#xFC;nen Innenh&#xF6;fen f&#xFC;hlen sich die Feldhasen wohl&#x201C;, sagt Nabu-Expertin Koch.</p><p class="a-paragraph" data-t-name="Paragraph">Die Wildkaninchen bevorzugen nach ersten Erkenntnissen dagegen den Westen Berlins. Im Tiergarten, im Park am Gleisdreieck, im Volkspark Jungfernheide und in den G&#xE4;rten des Schlosses Charlottenburg sind sie oft zu beobachten, deren Abbild meistens f&#xFC;r die Darstellung des Osterhasen verwendet wird. </p><p class="a-paragraph" data-t-name="Paragraph">Warum Wildkaninchen und Feldhasen ihre Gebiete in Berlin nach West und Ost aufgeteilt haben, ist unklar. &#x201E;Vielleicht liegt es daran, dass der Feldhase als Einzelg&#xE4;nger den geselligen Kaninchen aus dem Weg geht&#x201C;, sagt Katrin Koch. Es kann auch an der unterschiedlichen Lebensweise liegen. Anders als Kaninchen graben Feldhasen keine Erdbauten, sondern ducken sich bei Gefahr dicht an den Boden und bevorzugen daher Fl&#xE4;chen, wo sie sich gut in B&#xFC;schen und im hohen Gras tarnen k&#xF6;nnen, die sie offenbar vermehrt im Ostteil Berlins finden.</p><p class="a-paragraph" data-t-name="Paragraph">Um mehr Erkenntnisse &#xFC;ber die Vorkommen beider Tierarten in Berlin zu gewinnen, rufen Nabu und IZW die Berliner auf, bis zum 18. April ihre Feldhasen- und Wildkaninchensichtungen auf der Internetseite <a href="https://berlin.stadtwildtiere.de/melden">berlin.stadtwildtiere.de</a> einzutragen, vielleicht sogar ein Foto eines entdeckten Tieres mit beizuf&#xFC;gen. &#x201E;Die Beobachtungen sind wichtig f&#xFC;r die st&#xE4;dtebauliche Entwicklung Berlins. Dass immer mehr Wildtiere in der Stadt leben, muss auch beim Planen von Wohnquartieren ber&#xFC;cksichtigt werden&#x201C;, sagt Nabu-Expertin Koch. Am besten k&#xF6;nne man die Hasen in den Morgen- und Abendstunden entdecken. </p><p class="a-paragraph" data-t-name="Paragraph">Um die Arten nicht zu verwechseln gilt als Faustregel: Feldhasen unterscheiden sich durch ihre Gr&#xF6;&#xDF;e und die l&#xE4;ngeren Ohren deutlich von den kleineren Wildkaninchen.</p></div><div class="m-share m-share-lg"><hr><div class="m-socialbar m-socialbar--article"><div class="a-socialbutton"><a class="a-socialbutton__link" rel="noopener noreferrer" target="_blank" data-service="facebook" alt="Auf Facebook teilen" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.berliner-zeitung.de%2Fmensch-metropole%2Fberliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204"><span class="a-icon a-icon--socialbutton a-icon--facebook"></span></a></div><div class="a-socialbutton"><a class="a-socialbutton__link" rel="noopener noreferrer" target="_blank" data-service="twitter" alt="Auf Twitter teilen" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.berliner-zeitung.de%2Fmensch-metropole%2Fberliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204&amp;text=Berliner%20Forscher%20bitten%20zu%20Ostern%20zur%20Hasenjagd"><span class="a-icon a-icon--socialbutton a-icon--twitter"></span></a></div><div class="a-socialbutton"><a class="a-socialbutton__link" rel="noopener noreferrer" target="_blank" data-service="whatsapp" alt="Auf Whatsapp teilen" href="whatsapp://send?text=https%3A%2F%2Fwww.berliner-zeitung.de%2Fmensch-metropole%2Fberliner-forscher-bitten-zu-ostern-zur-hasenjagd-li.150204"><span class="a-icon a-icon--socialbutton a-icon--whatsapp"></span></a></div></div></div></div><div class="col-lg-4 col-xs-12 sidebar"><div data-t-name="Sidebar"><div class="sidebar-recommendations-wrapper" data-t-name="Recommendations"><div></div></div></div><div class="ad-article-sidebar"></div></div></div></div><div class="container--full-width bottom-container bottom-container-article"><div class="container"><div class="row"><div class="col-xs-12 col-md-12 col-lg-12"><div class="m-andre-title"><h2 class="m-andre-title__text">Weitere aktuelle Themen</h2></div></div><div class="col-xs-12 col-md-12 col-lg-12"><div><div class="recommended-mainlist-container">
+<div class="row">
+		<div class="col-xs-12 col-md-12 col-lg-3  divider-right divider-right__hide-lg  ">
+      
+        
+<a href="/mensch-metropole/neue-freiheit-li.149745">
+  <div class="m-article-teaser  m-article-teaser m-article-teaser--pic-top m-article-teaser--small-type m-article-teaser--pic-left-lg m-article-teaser--pic-one-half-lg m-article-teaser--pic-top-md m-article-teaser--small-type-md  ">
+    <picture class="m-image m-article-teaser__image">
+      <img class="teaser__img lazyload" height="4000" width="6000" data-width="6000" data-height="4000" data-src="https://berliner-zeitung.imgix.net/2021/4/1/041a6144-9ff4-498a-a312-0b6174a07c36.jpeg?rect=0%2C0%2C6000%2C4000&amp;w=1024&amp;auto=format" data-srcset="https://berliner-zeitung.imgix.net/2021/4/1/041a6144-9ff4-498a-a312-0b6174a07c36.jpeg?rect=0%2C0%2C6000%2C4000&amp;w=1024&amp;auto=format 1024w,https://berliner-zeitung.imgix.net/2021/4/1/041a6144-9ff4-498a-a312-0b6174a07c36.jpeg?rect=0%2C0%2C6000%2C4000&amp;w=750&amp;auto=format 750w,https://berliner-zeitung.imgix.net/2021/4/1/041a6144-9ff4-498a-a312-0b6174a07c36.jpeg?rect=0%2C0%2C6000%2C4000&amp;w=620&amp;auto=format 620w,https://berliner-zeitung.imgix.net/2021/4/1/041a6144-9ff4-498a-a312-0b6174a07c36.jpeg?rect=0%2C0%2C6000%2C4000&amp;w=450&amp;auto=format 450w,https://berliner-zeitung.imgix.net/2021/4/1/041a6144-9ff4-498a-a312-0b6174a07c36.jpeg?rect=0%2C0%2C6000%2C4000&amp;w=320&amp;auto=format 320w">
+      
+    </picture>
+    <div class="m-article-teaser__content">
+      <div class="m-article-teaser__top">
+        <span class="a-flag">Kommentar
+           <span class="audio" data-paid="false" data-title="Ist es okay, sich &#xFC;ber eine Impfeinladung zu freuen?" data-url="/mensch-metropole/neue-freiheit-li.149745"></span> 
+        </span>
+        <h2 class="m-article-teaser__title">Ist es okay, sich &#xFC;ber eine Impfeinladung zu freuen?</h2>
+        <p class="m-article-teaser__lead">Unser Autor hat eine Impfeinladung. Und das hat eine Menge Fragen ausgel&#xF6;st. Ist da nur Freude?&#xA0; Oder sind da auch Impf-Scham, Impf-Neid und Impf-Zweifel?</p>
+      </div>
+      <div class="m-article-teaser__bottom">
+        
+        <span class="m-article-teaser__meta">
+          
+  
+    Jens Blankennagel, 
+  02.04.2021
+  
+
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      
+       <hr class="a-separator a-separator-md"> 
+		</div>
+		<div class="col-xs-12 col-md-12 col-lg-6  divider-right divider-right__hide-lg  ">
+      
+        
+<a href="/mensch-metropole/friedhofsmalerin-li.149855">
+  <div class="m-article-teaser  m-article-teaser m-article-teaser--pic-top m-article-teaser--pic-right-lg m-article-teaser--pic-seven-tenth-lg m-article-teaser--pic-top-md m-article-teaser--small-type-md  ">
+    <picture class="m-image m-article-teaser__image">
+      <img class="teaser__img lazyload" height="3264" width="4896" data-width="4896" data-height="3264" data-src="https://berliner-zeitung.imgix.net/2021/4/1/df7804c2-7dd4-4879-bc95-95471c1012df.jpeg?rect=0%2C0%2C4896%2C3264&amp;w=1024&amp;auto=format" data-srcset="https://berliner-zeitung.imgix.net/2021/4/1/df7804c2-7dd4-4879-bc95-95471c1012df.jpeg?rect=0%2C0%2C4896%2C3264&amp;w=1024&amp;auto=format 1024w,https://berliner-zeitung.imgix.net/2021/4/1/df7804c2-7dd4-4879-bc95-95471c1012df.jpeg?rect=0%2C0%2C4896%2C3264&amp;w=750&amp;auto=format 750w,https://berliner-zeitung.imgix.net/2021/4/1/df7804c2-7dd4-4879-bc95-95471c1012df.jpeg?rect=0%2C0%2C4896%2C3264&amp;w=620&amp;auto=format 620w,https://berliner-zeitung.imgix.net/2021/4/1/df7804c2-7dd4-4879-bc95-95471c1012df.jpeg?rect=0%2C0%2C4896%2C3264&amp;w=450&amp;auto=format 450w,https://berliner-zeitung.imgix.net/2021/4/1/df7804c2-7dd4-4879-bc95-95471c1012df.jpeg?rect=0%2C0%2C4896%2C3264&amp;w=320&amp;auto=format 320w">
+      
+    </picture>
+    <div class="m-article-teaser__content">
+      <div class="m-article-teaser__top">
+        <span class="a-flag">Malerin Miriam Smidt
+           <span class="audio" data-paid="false" data-title="Gegen den Tod: Warum auf einem Berliner Friedhof farbenfrohe Kunst entsteht" data-url="/mensch-metropole/friedhofsmalerin-li.149855"></span> 
+        </span>
+        <h2 class="m-article-teaser__title">Gegen den Tod: Warum auf einem Berliner Friedhof farbenfrohe Kunst entsteht</h2>
+        <p class="m-article-teaser__lead">Als sie mit 33 Jahren die Diagnose Gehirntumor erh&#xE4;lt, k&#xFC;ndigt Miriam Smidt ihren Job und wird Malerin. Sie gibt nun Kunstkurse auf einem Friedhof.</p>
+      </div>
+      <div class="m-article-teaser__bottom">
+        
+        <span class="m-article-teaser__meta">
+          
+  
+    Dominik Bardow, 
+  02.04.2021
+  
+
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      
+       <hr class="a-separator a-separator-md"> 
+    </div>
+		<div class="col-xs-12 col-md-12 col-lg-3 contains-last-article">
+      
+        
+<a href="/mensch-metropole/ein-offener-wuetender-brief-an-den-spd-regierungschef-dietmar-woidke-li.150157">
+  <div class="m-article-teaser  m-article-teaser m-article-teaser--pic-top m-article-teaser--small-type m-article-teaser--pic-left-lg m-article-teaser--pic-one-half-lg m-article-teaser--pic-top-md m-article-teaser--small-type-md  ">
+    <picture class="m-image m-article-teaser__image">
+      <img class="teaser__img lazyload" height="3255" width="4882" data-width="4882" data-height="3255" data-src="https://berliner-zeitung.imgix.net/2021/4/2/0690088f-b554-49e8-a249-0083acb9d69b.jpeg?rect=0%2C203%2C4882%2C3255&amp;w=1024&amp;auto=format" data-srcset="https://berliner-zeitung.imgix.net/2021/4/2/0690088f-b554-49e8-a249-0083acb9d69b.jpeg?rect=0%2C203%2C4882%2C3255&amp;w=1024&amp;auto=format 1024w,https://berliner-zeitung.imgix.net/2021/4/2/0690088f-b554-49e8-a249-0083acb9d69b.jpeg?rect=0%2C203%2C4882%2C3255&amp;w=750&amp;auto=format 750w,https://berliner-zeitung.imgix.net/2021/4/2/0690088f-b554-49e8-a249-0083acb9d69b.jpeg?rect=0%2C203%2C4882%2C3255&amp;w=620&amp;auto=format 620w,https://berliner-zeitung.imgix.net/2021/4/2/0690088f-b554-49e8-a249-0083acb9d69b.jpeg?rect=0%2C203%2C4882%2C3255&amp;w=450&amp;auto=format 450w,https://berliner-zeitung.imgix.net/2021/4/2/0690088f-b554-49e8-a249-0083acb9d69b.jpeg?rect=0%2C203%2C4882%2C3255&amp;w=320&amp;auto=format 320w">
+      
+    </picture>
+    <div class="m-article-teaser__content">
+      <div class="m-article-teaser__top">
+        <span class="a-flag">Kommentar
+           <span class="audio" data-paid="false" data-title="Impf-Bankrott in Brandenburg" data-url="/mensch-metropole/ein-offener-wuetender-brief-an-den-spd-regierungschef-dietmar-woidke-li.150157"></span> 
+        </span>
+        <h2 class="m-article-teaser__title">Impf-Bankrott in Brandenburg</h2>
+        <p class="m-article-teaser__lead">Seit Monaten ist unsere Autorin Zeugin, wie betagte Menschen in Brandenburger Pflegeheimen wiederholt von der Impfstrategie ausgelassen werden.</p>
+      </div>
+      <div class="m-article-teaser__bottom">
+        
+        <span class="m-article-teaser__meta">
+          
+  
+    Birgit Walter, 
+  02.04.2021
+  
+
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      
+    </div>
+</div>
+</div></div></div></div></div></div></div></div></div>
+              <script>
+    if (!window.doubleClickBody) window.doubleClickBody = {}
+    function appendAdUnit() {
+      window.unitObj = {"id":"ad-article-sidebar","type":["article"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle","size":[[300,250],[301,600]]}
+      window.adClass = 'm-ad-unit--sidebar'
+      if (document.getElementsByClassName(window.unitObj.id)[0]){
+        document.getElementById(window.unitObj.divId) && document.getElementById(window.unitObj.divId).remove()
+        var e = document.createElement('div');
+        e.id = window.unitObj.divId
+        window.adClass && e.classList.add(window.adClass)
+        let classList
+          classList = 'm-ad-unit--sticky-sidebar'
+        e.classList.add("m-ad-unit")
+        classList && e.classList.add(classList)
+
+        const script = document.createElement('script')
+        script.innerHTML = `googletag.cmd.push(function() { googletag.display('${window.unitObj.divId}') });`
+
+        e.appendChild(script)
+
+        document.getElementsByClassName(window.unitObj.id)[0].appendChild(e)
+      }
+    }
+    window.doubleClickBody['ad-article-sidebar'] = appendAdUnit
+    window.unitObj = undefined
+    window.adClass = ''
+  </script>
+
+
+              <script>
+    if (!window.doubleClickBody) window.doubleClickBody = {}
+    function appendAdUnit() {
+      window.unitObj = {"id":"ad-article-content-1","type":["article"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle1","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos1"]}]}
+      window.adClass = 'm-ad-unit--content'
+      if (document.getElementsByClassName(window.unitObj.id)[0]){
+        document.getElementById(window.unitObj.divId) && document.getElementById(window.unitObj.divId).remove()
+        var e = document.createElement('div');
+        e.id = window.unitObj.divId
+        window.adClass && e.classList.add(window.adClass)
+        let classList
+          classList = 'm-ad-unit--mobile'
+        e.classList.add("m-ad-unit")
+        classList && e.classList.add(classList)
+
+        const script = document.createElement('script')
+        script.innerHTML = `googletag.cmd.push(function() { googletag.display('${window.unitObj.divId}') });`
+
+        e.appendChild(script)
+
+        document.getElementsByClassName(window.unitObj.id)[0].appendChild(e)
+      }
+    }
+    window.doubleClickBody['ad-article-content-1'] = appendAdUnit
+    window.unitObj = undefined
+    window.adClass = ''
+  </script>
+
+
+              <script>
+    if (!window.doubleClickBody) window.doubleClickBody = {}
+    function appendAdUnit() {
+      window.unitObj = {"id":"ad-article-content-2","target":"mobile","type":["article"],"path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle2","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos2"]}]}
+      window.adClass = 'm-ad-unit--content'
+      if (document.getElementsByClassName(window.unitObj.id)[0]){
+        document.getElementById(window.unitObj.divId) && document.getElementById(window.unitObj.divId).remove()
+        var e = document.createElement('div');
+        e.id = window.unitObj.divId
+        window.adClass && e.classList.add(window.adClass)
+        let classList
+          classList = 'm-ad-unit--mobile'
+        e.classList.add("m-ad-unit")
+        classList && e.classList.add(classList)
+
+        const script = document.createElement('script')
+        script.innerHTML = `googletag.cmd.push(function() { googletag.display('${window.unitObj.divId}') });`
+
+        e.appendChild(script)
+
+        document.getElementsByClassName(window.unitObj.id)[0].appendChild(e)
+      }
+    }
+    window.doubleClickBody['ad-article-content-2'] = appendAdUnit
+    window.unitObj = undefined
+    window.adClass = ''
+  </script>
+
+
+  </div>
+    <div class="container">
+      <div class="audio-player-wrapper"></div>
+    </div>
+<div class="o-footer">
+  <div class="o-footer__item container o-footer__with-badges">
+      <ul class="m-footer-corporate">
+          <li class="m-footer-corporate__item">
+            <a
+              href="/allgemeine-nutzungsbedingungen.235"
+            >
+              AGB
+            </a>
+          </li>
+          <li class="m-footer-corporate__item">
+            <a
+              href="/widerrufsbelehrung.85687"
+            >
+              Widerrufsbelehrung
+            </a>
+          </li>
+          <li class="m-footer-corporate__item">
+            <a
+              href="/datenschutzhinweise.729"
+            >
+              Datenschutzhinweise
+            </a>
+          </li>
+          <li class="m-footer-corporate__item">
+            <a
+              href="/impressum.88593"
+            >
+              Impressum
+            </a>
+          </li>
+          <li class="m-footer-corporate__item">
+            <a
+              href="/kontakt.228"
+            >
+              Kontakt
+            </a>
+          </li>
+          <li class="m-footer-corporate__item">
+            <a
+              href="/karriere-und-jobs"
+            >
+              Karriere
+            </a>
+          </li>
+          <li class="m-footer-corporate__item">
+            <a
+              href="/transformation"
+            >
+              Transformation
+            </a>
+          </li>
+        <li class="m-footer-corporate__item">
+          © Berliner Verlag GmbH 2021. Alle Rechte vorbehalten.
+        </li>
+      </ul>
+    <div class="footer-badges-row">
+
+      <div class="footer-badges">
+        <a href="https://apps.apple.com/de/developer/berliner-verlag-gmbh/id1488621894">
+          <div class="a-icon--appstore"></div>
+        </a>
+        <a href='https://play.google.com/store/apps/developer?id=Berliner+Verlag+GmbH'
+          class="footer-badges--google">
+          <div class="a-icon--playstore"></div>
+        </a>
+
+      </div>
+      <div class="a-socialbutton-container">
+          <div class="a-socialbutton">
+            <a class="a-socialbutton__link" href="https://twitter.com/berlinerzeitung">
+              <span class="a-icon a-icon--socialbutton a-icon--twitter-black"></span>
+            </a>
+          </div>
+          <div class="a-socialbutton">
+            <a class="a-socialbutton__link" href="https://www.facebook.com/berlinerzeitung/">
+              <span class="a-icon a-icon--socialbutton a-icon--facebook-black"></span>
+            </a>
+          </div>
+          <div class="a-socialbutton">
+            <a class="a-socialbutton__link" href="https://www.instagram.com/berliner_zeitung/">
+              <span class="a-icon a-icon--socialbutton a-icon--instagram-black"></span>
+            </a>
+          </div>
+          <div class="a-socialbutton">
+            <a class="a-socialbutton__link" href="https://www.linkedin.com/company/berliner-zeitung">
+              <span class="a-icon a-icon--socialbutton a-icon--linkedin-black"></span>
+            </a>
+          </div>
+          <div class="a-socialbutton">
+            <a class="a-socialbutton__link" href="https://www.youtube.com/channel/UCOK_An4e3Um5pkziO3e1Qyw">
+              <span class="a-icon a-icon--socialbutton a-icon--youtube-black"></span>
+            </a>
+          </div>
+          <div class="a-socialbutton">
+            <a class="a-socialbutton__link" href="https://t.me/berlinerzeitung">
+              <span class="a-icon a-icon--socialbutton a-icon--telegram-black"></span>
+            </a>
+          </div>
+          
+        </div>
+    </div>
+
+  </div>
+
+  <div class="o-footer__item container">
+  </div>
+</div>
+  </div>
+
+  
+  <script>
+    function removePlaceholders (vendor) {
+      const placeholders = document.getElementsByClassName(`social-media-placeholder-${vendor}`)
+      while(placeholders.length > 0) {
+        document.getElementsByClassName(`social-media-placeholder-${vendor}`)[0].remove()
+      }
+    }
+
+    function makeEmbedsVisible (className) {
+      const embeds = document.getElementsByClassName(className)
+      for (const embed of embeds) {
+        embed.classList.remove('hide-embed')
+      }
+    }
+
+    function fixSpacing (el) {
+      const parent = el.parentNode
+      parent.style.height = parent.getAttribute('data-height')
+      parent.style.paddingBottom = parent.getAttribute('data-padding-bottom')
+      parent.style.overflow = parent.getAttribute('data-overflow')
+    }
+
+    function enableInstagramPosts() {
+      if(!document.getElementById('instagramScript')){
+        makeEmbedsVisible('instagram-media')
+        removePlaceholders('instagram')
+        var e = document.createElement('script');
+        e.id = 'instagramScript'
+        e.type = 'text/javascript'
+        e.async = true;
+        e.src = "//www.instagram.com/embed.js";
+        document.body.appendChild(e)
+      }
+    }
+
+    function enableTwitterPosts() {
+      if(!document.getElementById('twitterScript')){
+        makeEmbedsVisible('twitter-tweet')
+        removePlaceholders('twitter')
+        var e = document.createElement('script');
+        e.id = 'twitterScript'
+        e.type = 'text/javascript'
+        e.async = true;
+        e.src = "https://platform.twitter.com/widgets.js";
+        document.body.appendChild(e)
+      }
+    }
+
+    function enableTiktokPosts() {
+      if(!document.getElementById('tiktokScript')){
+        makeEmbedsVisible('tiktok-embed')
+        removePlaceholders('tiktok')
+        var e = document.createElement('script');
+        e.id = 'tiktokScript'
+        e.type = 'text/javascript'
+        e.async = true;
+        e.src = "https://www.tiktok.com/embed.js";
+        document.body.appendChild(e)
+      }
+    }
+
+    function enableFacebookPosts() {
+      const facebookScriptUrl = '//www.facebook.com/plugins'
+      for( const el of document.getElementsByTagName('iframe')) {
+        if (el.getAttribute('data-src') && el.getAttribute('data-src').includes(facebookScriptUrl)) {
+          el.setAttribute('src', el.getAttribute('data-src'))
+          el.classList.remove('hide-embed')
+          fixSpacing(el)
+        }
+      }
+      removePlaceholders('facebook')
+    }
+
+    function enableYoutubePosts() {
+      const youtubeScriptUrl = '//www.youtube.com/embed'
+      for( const el of document.getElementsByTagName('iframe')) {
+        if (el.getAttribute('data-src') && el.getAttribute('data-src').includes(youtubeScriptUrl)) {
+          el.setAttribute('src', el.getAttribute('data-src'))
+          el.classList.remove('hide-embed')
+          fixSpacing(el)
+        }
+      }
+      removePlaceholders('youtube')
+    }
+
+    function enableSpotifyPosts() {
+      const spotifyScriptUrl = '//open.spotify.com/embed'
+      for( const el of document.getElementsByTagName('iframe')) {
+        if (el.getAttribute('data-src') && el.getAttribute('data-src').includes(spotifyScriptUrl)) {
+          el.setAttribute('src', el.getAttribute('data-src'))
+          el.classList.remove('hide-embed')
+          fixSpacing(el)
+        }
+      }
+      removePlaceholders('spotify')
+    }
+
+    // We have to distinguish between environments here, because we can't set up
+    // Sourcepoint locally, and if we don't execute these functions, none of
+    // the embeds will be shown.
+    if(window.location.host.includes('localhost')) {
+      enableInstagramPosts()
+      enableTwitterPosts()
+      enableSpotifyPosts()
+      enableFacebookPosts()
+      enableYoutubePosts()
+      enableTiktokPosts()
+    }
+  </script>
+
+
+
+<script defer src="https://www.berliner-zeitung.de/designs/berliner-zeitung/2.0.227/scripts.js"></script>
+
+    <script
+      defer
+      src="/dist/delivery.38acf4da7e1b035ab216.js"
+        integrity="sha256-wUGkFp4d6F3uswaoO8WRkuUCGL3c+yzxjASav6fJRbk= sha384-KNH31ENWrei4jh6QUTFf2bHjnpTUoVYTwDzmwZnNcsaAuwCy18jBn1sY1pNx2tl2 sha512-bRVtFQ7/87SsyhHq+5tGcDnpzuwwW/oymSBMWe2O5Tk6F6r0py6zMxrpMTFYPZCL9UwIvMoM2yJkrzxkY9BICQ=="
+        crossorigin="anonymous"
+    >
+    </script>
+
+
+  <script>
+    window.category = {"id":"id_mensch_und_metropole","label":"Mensch & Metropole","path":"/mensch-metropole","parent":"id_home","metadata":{"tagManager":"UA-XXXXXXXX-X","analytics":"UA-XXXXXXXX-X","ivwPixelId":"bar","homePageGAdUnits":[{"id":"id_mensch_und_metropole","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","divId":"div-gpt-ad-billboard1","targeting":[{"key":"Billboardslot","value":["Pos1"]}],"size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_politik_und_gesellschaft","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos2"]}],"divId":"div-gpt-ad-billboard2","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_wirtschaft_und_verantwortung","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos3"]}],"divId":"div-gpt-ad-billboard3","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_zukunft_und_technologie","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos4"]}],"divId":"div-gpt-ad-billboard4","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_sport_und_leidenschaft","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos5"]}],"divId":"div-gpt-ad-billboard5","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_kultur_und_vergnuegen","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos6"]}],"divId":"div-gpt-ad-billboard6","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_stil_und_individualitaet","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos7"]}],"divId":"div-gpt-ad-billboard7","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_gesundheit_und_oekologie","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos8"]}],"divId":"div-gpt-ad-billboard8","size":[[728,90],[970,90],[800,250],[970,250]]},{"id":"id_lernen_und_arbeiten","type":["page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Homepage","targeting":[{"key":"Billboardslot","value":["Pos9"]}],"divId":"div-gpt-ad-billboard9","size":[[728,90],[970,90],[800,250],[970,250]]}],"gAdUnits":[{"id":"ad-article-sidebar","type":["article"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle","size":[[300,250],[301,600]]},{"id":"ad-article-content-1","type":["article"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle1","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos1"]}]},{"id":"ad-article-content-2","target":"mobile","type":["article"],"path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-rectangle2","size":[[300,250],[300,600],[320,480]],"targeting":[{"key":"Mobileslot","value":["Pos2"]}]},{"id":"ad-top-mobile","type":["article","page"],"target":"mobile","path":"/21876035911/mew_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-mpu","size":[[300,250]]},{"id":"ad-top-desktop","type":["article","page"],"target":"desktop","path":"/21876035911/disp_berliner-zeitung.de/Mensch_und_Metropole","divId":"div-gpt-ad-leaderboard-0","size":[[728,90],[970,250],[970,90]]}]}}
+  </script>
+
+  <script>
+    function loadAdSense(){
+      if(!document.getElementById('adSenseTag')){
+        var e = document.createElement('script');
+        e.id = 'adSenseTag'
+        e.type = 'text/javascript'
+        e.async = true;
+        e.setAttribute('data-ad-client', 'ca-pub-4278449848105833');
+        e.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+        document.body.appendChild(e)
+      }
+    }
+</script>
+
+
+  </body>
+</html>
