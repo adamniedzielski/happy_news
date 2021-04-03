@@ -7,22 +7,30 @@ RSpec.describe SendDailyBriefing do
     get_rbb_articles = instance_double(
       GetRbbArticles,
       call: [
-        RSS::Rss::Channel::Item.new(link: "link-1"),
-        RSS::Rss::Channel::Item.new(link: "link-2")
+        RSS::Rss::Channel::Item.new(link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html"),
+        RSS::Rss::Channel::Item.new(link: "https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html")
       ]
     )
 
     get_rbb_article_content = instance_double(GetRbbArticleContent)
     allow(get_rbb_article_content).to receive(:call)
-      .with("link-1").and_return("Content 1")
+      .with("https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html")
+      .and_return("Content 1")
     allow(get_rbb_article_content).to receive(:call)
-      .with("link-2").and_return("Content 2")
+      .with("https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html")
+      .and_return("Content 2")
+
+    get_berliner_zeitung_articles = instance_double(
+      GetBerlinerZeitungArticles,
+      call: []
+    )
 
     send_to_kindle = instance_double(SendToKindle, call: nil)
 
     service = SendDailyBriefing.new(
       get_rbb_articles: get_rbb_articles,
       get_rbb_article_content: get_rbb_article_content,
+      get_berliner_zeitung_articles: get_berliner_zeitung_articles,
       send_to_kindle: send_to_kindle,
       banned_phrases: []
     )
@@ -47,11 +55,16 @@ RSpec.describe SendDailyBriefing do
   it "includes current date in the document name" do
     get_rbb_articles = instance_double(GetRbbArticles, call: [])
     get_rbb_article_content = instance_double(GetRbbArticleContent, call: "")
+    get_berliner_zeitung_articles = instance_double(
+      GetBerlinerZeitungArticles,
+      call: []
+    )
     send_to_kindle = instance_double(SendToKindle, call: nil)
 
     service = SendDailyBriefing.new(
       get_rbb_articles: get_rbb_articles,
       get_rbb_article_content: get_rbb_article_content,
+      get_berliner_zeitung_articles: get_berliner_zeitung_articles,
       send_to_kindle: send_to_kindle,
       banned_phrases: []
     )
@@ -70,20 +83,27 @@ RSpec.describe SendDailyBriefing do
     get_rbb_articles = instance_double(
       GetRbbArticles,
       call: [
-        RSS::Rss::Channel::Item.new(title: "Something BAD happened", link: "link-1"),
-        RSS::Rss::Channel::Item.new(title: "Something good happened", link: "link-2")
+        RSS::Rss::Channel::Item.new(title: "Something BAD happened", link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html"),
+        RSS::Rss::Channel::Item.new(title: "Something good happened", link: "https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html")
       ]
     )
 
     get_rbb_article_content = instance_double(GetRbbArticleContent)
     allow(get_rbb_article_content).to receive(:call)
-      .with("link-2").and_return("Happy Content")
+      .with("https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html")
+      .and_return("Happy Content")
+
+    get_berliner_zeitung_articles = instance_double(
+      GetBerlinerZeitungArticles,
+      call: []
+    )
 
     send_to_kindle = instance_double(SendToKindle, call: nil)
 
     service = SendDailyBriefing.new(
       get_rbb_articles: get_rbb_articles,
       get_rbb_article_content: get_rbb_article_content,
+      get_berliner_zeitung_articles: get_berliner_zeitung_articles,
       send_to_kindle: send_to_kindle,
       banned_phrases: ["bad"]
     )
@@ -109,20 +129,27 @@ RSpec.describe SendDailyBriefing do
     get_rbb_articles = instance_double(
       GetRbbArticles,
       call: [
-        RSS::Rss::Channel::Item.new(description: "Something violence accident", link: "link-1"),
-        RSS::Rss::Channel::Item.new(description: "Peace everywhere", link: "link-2")
+        RSS::Rss::Channel::Item.new(description: "Something violence accident", link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html"),
+        RSS::Rss::Channel::Item.new(description: "Peace everywhere", link: "https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html")
       ]
     )
 
     get_rbb_article_content = instance_double(GetRbbArticleContent)
     allow(get_rbb_article_content).to receive(:call)
-      .with("link-2").and_return("Happy Content")
+      .with("https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html")
+      .and_return("Happy Content")
+
+    get_berliner_zeitung_articles = instance_double(
+      GetBerlinerZeitungArticles,
+      call: []
+    )
 
     send_to_kindle = instance_double(SendToKindle, call: nil)
 
     service = SendDailyBriefing.new(
       get_rbb_articles: get_rbb_articles,
       get_rbb_article_content: get_rbb_article_content,
+      get_berliner_zeitung_articles: get_berliner_zeitung_articles,
       send_to_kindle: send_to_kindle,
       banned_phrases: ["violence"]
     )
@@ -138,6 +165,59 @@ RSpec.describe SendDailyBriefing do
             <head></head>
             <body>
               Happy Content
+            </body>
+          </html>
+        HEREDOC
+      )
+  end
+
+  it "gets articles from both RBB and Berliner Zeitung" do
+    get_rbb_articles = instance_double(
+      GetRbbArticles,
+      call: [
+        RSS::Rss::Channel::Item.new(link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html")
+      ]
+    )
+
+    get_rbb_article_content = instance_double(GetRbbArticleContent)
+    allow(get_rbb_article_content).to receive(:call)
+      .with("https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html")
+      .and_return("RBB Content")
+
+    get_berliner_zeitung_articles = instance_double(
+      GetBerlinerZeitungArticles,
+      call: [
+        RSS::Rss::Channel::Item.new(link: "https://www.berliner-zeitung.de/mensch-metropolemensch-metropole/neue-freiheit-li.149745")
+      ]
+    )
+
+    get_berliner_zeitung_article_content = instance_double(GetBerlinerZeitungArticleContent)
+    allow(get_berliner_zeitung_article_content).to receive(:call)
+      .with("https://www.berliner-zeitung.de/mensch-metropolemensch-metropole/neue-freiheit-li.149745")
+      .and_return("Berliner Zeitung Content")
+
+    send_to_kindle = instance_double(SendToKindle, call: nil)
+
+    service = SendDailyBriefing.new(
+      get_rbb_articles: get_rbb_articles,
+      get_rbb_article_content: get_rbb_article_content,
+      get_berliner_zeitung_articles: get_berliner_zeitung_articles,
+      get_berliner_zeitung_article_content: get_berliner_zeitung_article_content,
+      send_to_kindle: send_to_kindle,
+      banned_phrases: []
+    )
+
+    service.call
+
+    expect(send_to_kindle).to have_received(:call)
+      .with(
+        anything,
+        <<~HEREDOC
+          <!DOCTYPE html>
+          <html lang="en">
+            <head></head>
+            <body>
+              RBB Content Berliner Zeitung Content
             </body>
           </html>
         HEREDOC
