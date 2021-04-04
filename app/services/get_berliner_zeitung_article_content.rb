@@ -10,7 +10,9 @@ class GetBerlinerZeitungArticleContent
 
     title = page.at(".a-storyhead")
     leading_content = page.at(".a-storylead")
+
     content = page.at(".main-content")
+    content.css("img")&.remove
 
     "#{title} #{leading_content} #{content.inner_html}"
   end
