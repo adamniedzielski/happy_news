@@ -20,9 +20,10 @@ class SendDailyBriefing
 
   def call
     articles = get_rbb_articles.call + get_berliner_zeitung_articles.call
-    happy_articles = reject_unhappy(articles)
+    articles = latest_first(articles)
+    articles = reject_unhappy(articles)
 
-    body = happy_articles.map do |article|
+    body = articles.map do |article|
       get_content(article)
     end.join(" ")
 
@@ -37,6 +38,10 @@ class SendDailyBriefing
     :get_berliner_zeitung_articles, :get_berliner_zeitung_article_content,
     :send_to_kindle
   )
+
+  def latest_first(articles)
+    articles.sort_by(&:pubDate).reverse
+  end
 
   def reject_unhappy(articles)
     articles.reject do |article|

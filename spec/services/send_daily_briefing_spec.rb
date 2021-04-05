@@ -7,8 +7,14 @@ RSpec.describe SendDailyBriefing do
     get_rbb_articles = instance_double(
       GetRbbArticles,
       call: [
-        RSS::Rss::Channel::Item.new(link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html"),
-        RSS::Rss::Channel::Item.new(link: "https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html")
+        RSS::Rss::Channel::Item.new(
+          link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html",
+          pubDate: Time.zone.parse("2021-04-05 12:16")
+        ),
+        RSS::Rss::Channel::Item.new(
+          link: "https://www.rbb24.de/panorama/beitrag/av7/video-fischerinsel-fuenfzig-jahre-kinder-ddr-neubau.html",
+          pubDate: Time.zone.parse("2021-04-05 12:10")
+        )
       ]
     )
 
@@ -175,7 +181,10 @@ RSpec.describe SendDailyBriefing do
     get_rbb_articles = instance_double(
       GetRbbArticles,
       call: [
-        RSS::Rss::Channel::Item.new(link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html")
+        RSS::Rss::Channel::Item.new(
+          link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html",
+          pubDate: Time.zone.parse("2021-04-05 12:16")
+        )
       ]
     )
 
@@ -187,7 +196,10 @@ RSpec.describe SendDailyBriefing do
     get_berliner_zeitung_articles = instance_double(
       GetBerlinerZeitungArticles,
       call: [
-        RSS::Rss::Channel::Item.new(link: "https://www.berliner-zeitung.de/mensch-metropolemensch-metropole/neue-freiheit-li.149745")
+        RSS::Rss::Channel::Item.new(
+          link: "https://www.berliner-zeitung.de/mensch-metropolemensch-metropole/neue-freiheit-li.149745",
+          pubDate: Time.zone.parse("2021-04-05 12:10")
+        )
       ]
     )
 
@@ -218,6 +230,65 @@ RSpec.describe SendDailyBriefing do
             <head></head>
             <body>
               RBB Content Berliner Zeitung Content
+            </body>
+          </html>
+        HEREDOC
+      )
+  end
+
+  it "shows latest articles first" do
+    get_rbb_articles = instance_double(
+      GetRbbArticles,
+      call: [
+        RSS::Rss::Channel::Item.new(
+          link: "https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html",
+          pubDate: Time.zone.parse("2021-04-04 18:02")
+        )
+      ]
+    )
+
+    get_rbb_article_content = instance_double(GetRbbArticleContent)
+    allow(get_rbb_article_content).to receive(:call)
+      .with("https://www.rbb24.de/sport/beitrag/2021/04/fussball-50-jahre-rote-karte-fakten.html")
+      .and_return("RBB Content")
+
+    get_berliner_zeitung_articles = instance_double(
+      GetBerlinerZeitungArticles,
+      call: [
+        RSS::Rss::Channel::Item.new(
+          link: "https://www.berliner-zeitung.de/mensch-metropolemensch-metropole/neue-freiheit-li.149745",
+          pubDate: Time.zone.parse("2021-04-05 12:16")
+        )
+      ]
+    )
+
+    get_berliner_zeitung_article_content = instance_double(GetBerlinerZeitungArticleContent)
+    allow(get_berliner_zeitung_article_content).to receive(:call)
+      .with("https://www.berliner-zeitung.de/mensch-metropolemensch-metropole/neue-freiheit-li.149745")
+      .and_return("Berliner Zeitung Content")
+
+    send_to_kindle = instance_double(SendToKindle, call: nil)
+
+    service = SendDailyBriefing.new(
+      get_rbb_articles: get_rbb_articles,
+      get_rbb_article_content: get_rbb_article_content,
+      get_berliner_zeitung_articles: get_berliner_zeitung_articles,
+      get_berliner_zeitung_article_content: get_berliner_zeitung_article_content,
+      send_to_kindle: send_to_kindle,
+      banned_phrases: []
+    )
+
+    service.call
+
+    expect(send_to_kindle).to have_received(:call)
+      .with(
+        anything,
+        <<~HEREDOC
+          <!DOCTYPE html>
+          <html lang="en">
+            <head></head>
+            <body>
+              Berliner Zeitung Content RBB Content
             </body>
           </html>
         HEREDOC
