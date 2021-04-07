@@ -8,6 +8,8 @@ class GetBerlinerZeitungArticleContent
   def call(url)
     page = Nokogiri::HTML(http_client.get(url).body)
 
+    return "" if page.css(".paywall-overlay").present?
+
     title = page.at(".a-storyhead")
     leading_content = page.at(".a-storylead")
 
