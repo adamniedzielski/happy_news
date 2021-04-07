@@ -49,4 +49,14 @@ RSpec.describe GetBerlinerZeitungArticleContent do
 
     expect(result).not_to include("<img")
   end
+
+  it "skips paid articles" do
+    http_client = MockHTTPClient.new("berliner-zeitung-paid-article.html")
+    service = GetBerlinerZeitungArticleContent.new(http_client: http_client)
+    result = service.call(
+      "https://www.berliner-zeitung.de/mensch-metropole/mordvorwurf-pfleger-soll-bei-seniorin-beatmungsgeraet-abgestellt-haben-li.150858"
+    )
+
+    expect(result).to eq ""
+  end
 end
