@@ -26,4 +26,4 @@ jobs:
         docker run happy_news bundle exec rubocop
     - name: Run tests
       run: |
-        docker run --env DATABASE_HOST=postgres --env DATABASE_USERNAME=postgres --env GMAIL_USERNAME=${{ secrets.GMAIL_USERNAME }} happy_news bundle exec rails db:setup spec
+        docker run --add-host=host.docker.internal:host-gateway --env DATABASE_HOST=host.docker.internal --env DATABASE_USERNAME=postgres --env GMAIL_USERNAME=${{ secrets.GMAIL_USERNAME }} happy_news bundle exec rails db:setup spec
