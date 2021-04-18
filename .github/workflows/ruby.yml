@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker image
-      run: docker build --target=ci --tag=happy_news
+      run: docker build --target=ci --tag=happy_news .
     - name: Run Rubocop
       run: |
         docker run happy_news bundle exec rubocop
