@@ -13,11 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker image
-      run: docker build --target=ci --tag=ghcr.io/adamniedzielski/happy_news/happy_news .
+      run: docker build --target=ci --tag=ghcr.io/adamniedzielski/happy_news .
     - name: Log into registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
     - name: Push image
-      run: docker push ghcr.io/adamniedzielski/happy_news/happy_news
+      run: docker push ghcr.io/adamniedzielski/happy_news
 
   test:
     needs: build
