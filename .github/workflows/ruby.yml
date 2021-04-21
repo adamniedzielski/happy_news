@@ -45,12 +45,10 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-      - name: Switch to working directory
-        run: |
-          cd /happy_news
       - name: Run Rubocop
         run: |
           bundle exec rubocop
+        working-directory: /happy_news
       - name: Run tests
         run: |
           bundle exec rails db:setup spec
