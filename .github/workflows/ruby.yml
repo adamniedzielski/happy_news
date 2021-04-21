@@ -52,3 +52,4 @@ jobs:
       - name: Run tests
         run: |
           bundle exec rails db:setup spec
+        working-directory: /happy_news
