@@ -13,15 +13,22 @@ class GetRbbArticleContent
 
     return "" unless article
 
-    article.css(".commentarea")&.remove
-    article.css(".newSharing")&.remove
-    article.css("section.teaserbox")&.remove
-    article.css("figure.picture")&.remove
-
+    select_useful_content(article)
     article.inner_html
   end
 
   private
 
   attr_accessor :http_client
+
+  def select_useful_content(article)
+    article.css(".commentarea")&.remove
+    article.css(".newSharing")&.remove
+    article.css("section.teaserbox")&.remove
+    article.css("figure.picture")&.remove
+
+    article.css(".textblock").find do |element|
+      element.text.include?("Die Kommentarfunktion wurde am")
+    end&.remove
+  end
 end

@@ -52,6 +52,17 @@ RSpec.describe GetRbbArticleContent do
     )
   end
 
+  it "leaves out the notice about comments when comments are closed" do
+    http_client = MockHTTPClient.new("rbb-article-closed-comments.html")
+    service = GetRbbArticleContent.new(http_client: http_client)
+    result = service.call(
+      "https://www.rbb24.de/politik/beitrag/2021/04/fragen-antworten-mietendeckel-aus-nachzahlungen.html"
+    )
+
+    expect(result).to include("Wer ist von dem Beschluss des Bundesverfassungsgerichts betroffen?")
+    expect(result).not_to include("Wir schließen die Kommentarfunktion")
+  end
+
   it "skips overview articles" do
     http_client = MockHTTPClient.new("rbb-article-overview.html")
     service = GetRbbArticleContent.new(http_client: http_client)
