@@ -28,7 +28,15 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
-
+    container:
+      image: ghcr.io/adamniedzielski/happy_news:latest
+      credentials:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.PAT_TOKEN }}
+    env:
+      DATABASE_HOST: postgres
+      DATABASE_USERNAME: postgres
+      GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
     services:
       postgres:
         image: postgres:11.6-alpine
@@ -37,10 +45,9 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-
-    - name: Run Rubocop
-      run: |
-        docker run happy_news bundle exec rubocop
-    - name: Run tests
-      run: |
-        docker run --add-host=host.docker.internal:host-gateway --env DATABASE_HOST=host.docker.internal --env DATABASE_USERNAME=postgres --env GMAIL_USERNAME=${{ secrets.GMAIL_USERNAME }} happy_news bundle exec rails db:setup spec
+      - name: Run Rubocop
+        run: |
+          bundle exec rubocop
+      - name: Run tests
+        run: |
+          bundle exec rails db:setup spec
