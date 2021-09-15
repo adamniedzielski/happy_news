@@ -23,13 +23,13 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/adamniedzielski/happy_news:latest
+            ghcr.io/adamniedzielski/happy_news:${{ github.sha }}
           target: ci
   test:
     needs: build
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/adamniedzielski/happy_news:latest
+      image: ghcr.io/adamniedzielski/happy_news:${{ github.sha }}
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
