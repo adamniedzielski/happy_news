@@ -15,8 +15,8 @@ jobs:
         uses: docker/login-action@v1 
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.PAT_TOKEN }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
@@ -31,8 +31,8 @@ jobs:
     container:
       image: ghcr.io/adamniedzielski/happy_news:latest
       credentials:
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.PAT_TOKEN }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     env:
       DATABASE_HOST: postgres
       DATABASE_USERNAME: postgres
