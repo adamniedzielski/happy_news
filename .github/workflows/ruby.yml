@@ -7,23 +7,50 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1 
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/adamniedzielski/happy_news:${{ github.sha }}
+          target: ci
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/adamniedzielski/happy_news:${{ github.sha }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      DATABASE_HOST: postgres
+      DATABASE_USERNAME: postgres
+      GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
     services:
       postgres:
         image: postgres:11.6-alpine
         ports:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    defaults:
+      run:
+        working-directory: /happy_news
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build Docker image
-      run: docker build --target=ci --tag=happy_news .
-    - name: Run Rubocop
-      run: |
-        docker run happy_news bundle exec rubocop
-    - name: Run tests
-      run: |
-        docker run --add-host=host.docker.internal:host-gateway --env DATABASE_HOST=host.docker.internal --env DATABASE_USERNAME=postgres --env GMAIL_USERNAME=${{ secrets.GMAIL_USERNAME }} happy_news bundle exec rails db:setup spec
+      - name: Run Rubocop
+        run: |
+          bundle exec rubocop
+      - name: Run tests
+        run: |
+          bundle exec rails db:setup spec
