@@ -10,3 +10,8 @@ FROM dev AS ci
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 COPY . ./
+
+FROM dev AS production
+COPY Gemfile Gemfile.lock ./
+RUN bundle install --deployment --without test development
+COPY . ./
