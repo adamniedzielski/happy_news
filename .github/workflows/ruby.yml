@@ -27,6 +27,7 @@ jobs:
           target: ci
   test:
     needs: build
+    runs-on: ubuntu-latest
     container:
       image: ghcr.io/adamniedzielski/happy_news:${{ github.sha }}
       credentials:
