@@ -11,7 +11,7 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle install
 COPY . ./
 
-FROM dev AS production
+FROM dev AS productionn
 COPY Gemfile Gemfile.lock ./
 RUN bundle install --deployment --without test development
 COPY . ./
