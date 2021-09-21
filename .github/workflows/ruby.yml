@@ -27,7 +27,6 @@ jobs:
           target: ci
   test:
     needs: build
-    runs-on: ubuntu-latest
     container:
       image: ghcr.io/adamniedzielski/happy_news:${{ github.sha }}
       credentials:
@@ -54,3 +53,16 @@ jobs:
       - name: Run tests
         run: |
           bundle exec rails db:setup spec
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build, push and deploy to Heroku
+        uses: jctaveras/heroku-deploy@v2.1.3
+        with:
+          email: ${{ secrets.HEROKU_EMAIL }}
+          api_key: ${{ secrets.HEROKU_API_KEY }}
+          app_name: happy-news-berlin
+          dockerfile_path: ''
+          options: --target production
